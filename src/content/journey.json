@@ -1,13 +1,13 @@
 {
-  "intro": "From building a house on wheels to building software that moves people. Every mile, every line of code, every summit has led here.",
+  "intro": "Movement is at my core—whether it's miles on the trail, lines of code, or life itself. I keep moving forward.",
   "timeline": [
     {
       "id": "van-build",
       "title": "Built a House on Wheels",
-      "period": "2020-2022",
-      "description": "Converted a cargo van into a mobile home. Designed the layout, installed solar, built custom cabinetry. Lived on the road for 2 years, working remotely and chasing trails.",
+      "period": "2020",
+      "description": "My pandemic project: converted a cargo van into a mobile home. Designed the layout, installed solar, built custom cabinetry. A year of hands-on work that became my ticket to freedom.",
       "location": {
-        "name": "The Open Road",
+        "name": "The Workshop",
         "coordinates": null
       },
       "image": "/images/journey/van.jpg",
@@ -15,10 +15,23 @@
       "highlights": ["Full electrical system", "Custom woodwork", "Off-grid capable"]
     },
     {
+      "id": "vanlife",
+      "title": "Full-Time Vanlife",
+      "period": "2021-2023",
+      "description": "Two years on the road, working remotely and chasing trails across the West. Flagstaff, Santa Barbara, and Estes Park became my regular haunts. This is when ultrarunning took over my life.",
+      "location": {
+        "name": "The Open Road",
+        "coordinates": null
+      },
+      "image": "/images/journey/vanlife.jpg",
+      "type": "adventure",
+      "highlights": ["Flagstaff", "Santa Barbara", "Estes Park"]
+    },
+    {
       "id": "flagstaff",
       "title": "Flagstaff, AZ",
-      "period": "2022",
-      "description": "Landed in the mountains at 7,000 feet. Started serious ultrarunning training. The high altitude and endless trails transformed my running.",
+      "period": "2023-2024",
+      "description": "Moved out of the van and into the mountains at 7,000 feet. Flagstaff became my first real home base in years. High altitude training, endless trails, and a brief detour to Colorado Springs in early 2024 before returning to Flag.",
       "location": {
         "name": "Flagstaff, AZ",
         "coordinates": { "lat": 35.198, "lng": -111.651 }
@@ -28,23 +41,23 @@
       "highlights": ["7,000 ft elevation", "Coconino National Forest", "Ultra training base"]
     },
     {
-      "id": "colorado-springs",
-      "title": "Colorado Springs, CO",
-      "period": "2023",
-      "description": "High altitude training at its finest. Garden of the Gods, Pikes Peak, and endless fourteeners. Started building PathQuest to track my peak bagging adventures.",
+      "id": "pathquest",
+      "title": "PathQuest Begins",
+      "period": "Late 2024",
+      "description": "Started conceptualizing and building PathQuest—a platform to track peak bagging adventures. What began as a personal project became a full-fledged app with web and mobile experiences.",
       "location": {
-        "name": "Colorado Springs, CO",
-        "coordinates": { "lat": 38.834, "lng": -104.821 }
+        "name": "Flagstaff, AZ",
+        "coordinates": { "lat": 35.198, "lng": -111.651 }
       },
-      "image": "/images/journey/colorado-springs.jpg",
-      "type": "location",
-      "highlights": ["6,000 ft elevation", "Pikes Peak access", "PathQuest origins"]
+      "image": "/images/journey/pathquest.jpg",
+      "type": "project",
+      "highlights": ["React Native", "Next.js", "Strava integration"]
     },
     {
       "id": "santa-barbara",
       "title": "Santa Barbara, CA",
-      "period": "2024-Present",
-      "description": "Current home base. Ocean trails, mountain runs, and the perfect climate for year-round training. Building the next generation of outdoor tech.",
+      "period": "Feb 2025-Present",
+      "description": "Current home base. Ocean trails, mountain runs, and the perfect climate for year-round training. I've loved this place ever since I arrived. Building the next generation of outdoor tech.",
       "location": {
         "name": "Santa Barbara, CA",
         "coordinates": { "lat": 34.4208, "lng": -119.6982 }

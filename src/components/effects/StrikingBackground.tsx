@@ -81,18 +81,21 @@ export function StrikingBackground() {
   const accentColor = isDark ? "#ff4d00" : "#2d8a4e";
   const bgColor = isDark ? "#000000" : "#f5f0e8";
 
-  // Generate mountain layers with extended peaks
+  // Generate mountain layers with overlapping peaks (no flat spots)
   const mountainLayers = [
     {
       peaks: [
-        { x: -width * 0.1, height: 150, width: 180 },
-        { x: width * 0.1, height: 200, width: 220 },
-        { x: width * 0.25, height: 280, width: 300 },
-        { x: width * 0.45, height: 220, width: 250 },
-        { x: width * 0.65, height: 320, width: 350 },
-        { x: width * 0.85, height: 260, width: 280 },
-        { x: width * 1.05, height: 180, width: 200 },
-        { x: width * 1.25, height: 240, width: 260 },
+        { x: -width * 0.1, height: 150, width: 280 },
+        { x: width * 0.02, height: 200, width: 320 },
+        { x: width * 0.15, height: 280, width: 380 },
+        { x: width * 0.28, height: 220, width: 340 },
+        { x: width * 0.42, height: 320, width: 420 },
+        { x: width * 0.56, height: 240, width: 360 },
+        { x: width * 0.70, height: 290, width: 400 },
+        { x: width * 0.84, height: 260, width: 380 },
+        { x: width * 0.98, height: 200, width: 320 },
+        { x: width * 1.12, height: 270, width: 360 },
+        { x: width * 1.26, height: 230, width: 340 },
       ],
       baseY: height * 0.82,
       opacity: isDark ? 0.18 : 0.12,
@@ -100,14 +103,17 @@ export function StrikingBackground() {
     },
     {
       peaks: [
-        { x: -width * 0.15, height: 100, width: 160 },
-        { x: width * 0.05, height: 140, width: 200 },
-        { x: width * 0.2, height: 200, width: 260 },
-        { x: width * 0.4, height: 160, width: 220 },
-        { x: width * 0.55, height: 240, width: 300 },
-        { x: width * 0.75, height: 180, width: 240 },
-        { x: width * 0.95, height: 220, width: 280 },
-        { x: width * 1.15, height: 160, width: 200 },
+        { x: -width * 0.12, height: 100, width: 260 },
+        { x: width * 0.0, height: 140, width: 300 },
+        { x: width * 0.12, height: 200, width: 340 },
+        { x: width * 0.25, height: 160, width: 300 },
+        { x: width * 0.38, height: 240, width: 380 },
+        { x: width * 0.52, height: 180, width: 320 },
+        { x: width * 0.66, height: 220, width: 360 },
+        { x: width * 0.80, height: 190, width: 340 },
+        { x: width * 0.94, height: 230, width: 360 },
+        { x: width * 1.08, height: 170, width: 300 },
+        { x: width * 1.22, height: 210, width: 340 },
       ],
       baseY: height * 0.88,
       opacity: isDark ? 0.1 : 0.08,
@@ -115,13 +121,16 @@ export function StrikingBackground() {
     },
     {
       peaks: [
-        { x: -width * 0.05, height: 80, width: 140 },
-        { x: width * 0.15, height: 110, width: 180 },
-        { x: width * 0.35, height: 150, width: 220 },
-        { x: width * 0.55, height: 100, width: 180 },
-        { x: width * 0.7, height: 170, width: 240 },
-        { x: width * 0.9, height: 130, width: 200 },
-        { x: width * 1.1, height: 160, width: 220 },
+        { x: -width * 0.08, height: 80, width: 240 },
+        { x: width * 0.05, height: 110, width: 280 },
+        { x: width * 0.18, height: 150, width: 320 },
+        { x: width * 0.32, height: 100, width: 280 },
+        { x: width * 0.46, height: 170, width: 340 },
+        { x: width * 0.60, height: 130, width: 300 },
+        { x: width * 0.74, height: 160, width: 320 },
+        { x: width * 0.88, height: 120, width: 280 },
+        { x: width * 1.02, height: 150, width: 300 },
+        { x: width * 1.16, height: 140, width: 280 },
       ],
       baseY: height * 0.94,
       opacity: isDark ? 0.05 : 0.04,
@@ -129,19 +138,19 @@ export function StrikingBackground() {
     },
   ];
 
-  // Generate contour lines
-  const contourLines = Array.from({ length: 10 }, (_, i) => ({
-    baseY: height * 0.25 + i * 70,
-    amplitude: 12 + Math.random() * 18,
-    frequency: 0.7 + Math.random() * 0.5,
-    phase: Math.random() * Math.PI * 2,
-    delay: i * 0.12,
-    duration: 10 + Math.random() * 6,
-  }));
-
   if (!mounted) {
     return null;
   }
+
+  // Generate contour lines - only after mounted to avoid hydration issues
+  const contourLines = Array.from({ length: 10 }, (_, i) => ({
+    baseY: height * 0.25 + i * 70,
+    amplitude: 12 + (i * 1.8), // Deterministic instead of random
+    frequency: 0.7 + (i * 0.05), // Deterministic instead of random
+    phase: (i * Math.PI * 0.2), // Deterministic instead of random
+    delay: i * 0.12,
+    duration: 10 + (i * 0.6), // Deterministic instead of random
+  }));
 
   return (
     <div 

@@ -5,6 +5,7 @@ import { ArrowUpRight, Mountain, Trophy, Clock, MapPin } from "lucide-react";
 import { getRunning } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { Button } from "@/components/ui/button";
+import { RaceMap } from "@/components/maps";
 
 // Strava icon
 function StravaIcon({ className }: { className?: string }) {
@@ -30,15 +31,15 @@ export default function RunningPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-mono text-ember uppercase tracking-widest">
+            <span className="text-xs font-mono text-accent uppercase tracking-widest">
               Ultra Running
             </span>
-            <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mt-4 leading-[0.9]">
-              {running.headline.split('.')[0]}<span className="text-ember">.</span>
+            <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mt-4 leading-[0.9]">
+              {running.headline.split('.')[0]}<span className="text-accent">.</span>
               <br />
-              <span className="text-white/20">{running.headline.split('.').slice(1).join('.')}</span>
+              <span className="text-foreground/20">{running.headline.split('.').slice(1).join('.')}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-white/40 max-w-2xl mt-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-foreground/40 max-w-2xl mt-8 leading-relaxed">
               {running.philosophy}
             </p>
           </motion.div>
@@ -46,7 +47,7 @@ export default function RunningPage() {
       </section>
 
       {/* Stats Grid */}
-      <section className="relative py-16 px-6 border-t border-white/5">
+      <section className="relative py-16 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {running.stats.map((stat, i) => (
@@ -58,10 +59,10 @@ export default function RunningPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 sm:p-8 text-center"
               >
-                <div className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-ember stat-number">
+                <div className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-accent stat-number">
                   {stat.value}
                 </div>
-                <div className="text-xs font-mono text-white/30 uppercase tracking-widest mt-2">
+                <div className="text-sm font-mono text-foreground/60 uppercase tracking-wider mt-2">
                   {stat.label}
                 </div>
               </motion.div>
@@ -70,8 +71,8 @@ export default function RunningPage() {
         </div>
       </section>
 
-      {/* Featured Races */}
-      <section className="relative py-16 px-6 border-t border-white/5">
+      {/* Featured Routes with Maps */}
+      <section className="relative py-16 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -80,97 +81,126 @@ export default function RunningPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <span className="text-xs font-mono text-white/30 uppercase tracking-widest">
-              Race Results
+            <span className="text-xs font-mono text-foreground/30 uppercase tracking-widest">
+              Featured Routes
             </span>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white mt-4">
-              Recent finishes<span className="text-ember">.</span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4">
+              The courses<span className="text-accent">.</span>
             </h2>
           </motion.div>
 
-          <div className="space-y-6">
-            {running.races.filter(r => r.featured).map((race, i) => (
+          <div className="grid lg:grid-cols-3 gap-6">
+            {running.featuredRoutes.map((route, i) => (
               <motion.div
-                key={race.id}
+                key={route.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="edge-card overflow-hidden group"
               >
-                <div className="edge-card p-6 sm:p-8 group">
-                  <div className="grid lg:grid-cols-[1fr,auto] gap-8">
-                    {/* Main content */}
-                    <div>
-                      <div className="flex flex-wrap items-center gap-4 mb-4">
-                        <h3 className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-white group-hover:text-ember transition-colors">
-                          {race.name}
-                        </h3>
-                        {race.highlight && (
-                          <span className="tag">{race.highlight}</span>
-                        )}
-                      </div>
-                      
-                      <div className="flex flex-wrap items-center gap-6 text-sm text-white/40 mb-6">
-                        <span className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
-                          {race.location}
-                        </span>
-                        <span>{race.year}</span>
-                      </div>
-                      
-                      <p className="text-white/50 leading-relaxed max-w-2xl">
-                        {race.description}
-                      </p>
-
-                      {/* Elevation visualization */}
-                      {race.elevationData && (
-                        <div className="mt-6 h-16 flex items-end gap-0.5">
-                          {race.elevationData.map((elev, j) => {
-                            const maxElev = Math.max(...race.elevationData);
-                            const height = (elev / maxElev) * 100;
-                            return (
-                              <motion.div
-                                key={j}
-                                initial={{ height: 0 }}
-                                whileInView={{ height: `${height}%` }}
-                                viewport={{ once: true }}
-                                transition={{ delay: j * 0.02, duration: 0.3 }}
-                                className="flex-1 bg-ember/20 group-hover:bg-ember/40 transition-colors"
-                              />
-                            );
-                          })}
-                        </div>
-                      )}
+                <RaceMap
+                  routeUrl={route.routeUrl}
+                  name={route.name}
+                  className="h-64"
+                />
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+                      {route.name}
+                    </h3>
+                    <span className="tag">
+                      {route.result}
+                    </span>
+                  </div>
+                  {(route.distance || route.elevation) && (
+                    <div className="flex gap-4 text-sm font-mono text-foreground/40">
+                      {route.distance && <span>{route.distance}</span>}
+                      {route.elevation && <span>{route.elevation}</span>}
                     </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                    {/* Stats sidebar */}
-                    <div className="flex lg:flex-col gap-6 lg:gap-4 lg:text-right">
-                      <div>
-                        <div className="font-[family-name:var(--font-display)] text-3xl font-bold text-ember">
-                          {race.place}
-                        </div>
-                        <div className="text-xs font-mono text-white/30 uppercase tracking-widest">
-                          Place
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-[family-name:var(--font-display)] text-2xl font-bold text-white">
-                          {race.distance}
-                        </div>
-                        <div className="text-xs font-mono text-white/30 uppercase tracking-widest">
-                          Distance
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-[family-name:var(--font-display)] text-xl font-bold text-white/60">
-                          {race.elevation}
-                        </div>
-                        <div className="text-xs font-mono text-white/30 uppercase tracking-widest">
-                          Gain
-                        </div>
-                      </div>
+      {/* Featured Races */}
+      <section className="relative py-16 px-6 border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <span className="text-xs font-mono text-foreground/30 uppercase tracking-widest">
+              Race Results
+            </span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4">
+              Recent finishes<span className="text-accent">.</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {running.races.filter(r => r.featured).map((race, i) => (
+              <motion.div
+                key={race.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+              >
+                <div className="edge-card p-4 group h-full">
+                  <div className="flex justify-between items-start gap-3 mb-1">
+                    <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-foreground group-hover:text-accent transition-colors leading-tight">
+                      {race.name}
+                    </h3>
+                    <div className="font-[family-name:var(--font-display)] text-2xl font-bold text-accent shrink-0">
+                      {race.place}
                     </div>
                   </div>
+
+                  {/* Distance, Elevation & Time - prominent */}
+                  <div className="flex items-center gap-3 mb-3 flex-wrap">
+                    {race.distance && (
+                      <span className="text-sm font-semibold text-foreground/70">{race.distance}</span>
+                    )}
+                    {race.elevation && (
+                      <>
+                        <span className="text-foreground/30">↑</span>
+                        <span className="text-sm font-semibold text-foreground/70">{race.elevation}</span>
+                      </>
+                    )}
+                    {(race.distance || race.elevation) && race.time && (
+                      <span className="text-foreground/30">•</span>
+                    )}
+                    {race.time && (
+                      <span className="text-sm font-mono font-semibold text-foreground/70">{race.time}</span>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-foreground/40 mb-3">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-3 h-3" />
+                      {race.location}
+                    </span>
+                    <span>{race.year}</span>
+                  </div>
+
+                  {race.highlight && (
+                    <div className="mb-3">
+                      <span className="tag text-xs">{race.highlight}</span>
+                    </div>
+                  )}
+                  
+                  {race.description && (
+                    <p className="text-xs text-foreground/40 leading-relaxed line-clamp-2">
+                      {race.description}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -179,7 +209,7 @@ export default function RunningPage() {
       </section>
 
       {/* All Races */}
-      <section className="relative py-16 px-6 border-t border-white/5">
+      <section className="relative py-16 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -188,35 +218,33 @@ export default function RunningPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-white">
-              All races<span className="text-ember">.</span>
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
+              All races<span className="text-accent">.</span>
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {running.races.map((race, i) => (
               <motion.div
                 key={race.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="edge-card p-5 group"
+                transition={{ duration: 0.4, delay: i * 0.02 }}
+                className="edge-card p-3 group"
               >
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <h3 className="font-[family-name:var(--font-display)] font-bold text-white group-hover:text-ember transition-colors">
-                      {race.name}
-                    </h3>
-                    <div className="text-xs text-white/30">{race.year}</div>
-                  </div>
-                  <div className="font-[family-name:var(--font-display)] text-xl font-bold text-ember">
+                <div className="flex justify-between items-start gap-2 mb-1">
+                  <h3 className="font-[family-name:var(--font-display)] text-sm font-bold text-foreground group-hover:text-accent transition-colors leading-tight">
+                    {race.name}
+                  </h3>
+                  <div className="font-[family-name:var(--font-display)] text-lg font-bold text-accent shrink-0">
                     {race.place}
                   </div>
                 </div>
-                <div className="flex gap-4 text-xs font-mono text-white/40">
-                  <span>{race.distance}</span>
-                  <span>{race.elevation}</span>
+                <div className="flex flex-wrap gap-x-3 gap-y-0 text-xs font-mono text-foreground/40">
+                  <span>{race.year}</span>
+                  {race.distance && <span>{race.distance}</span>}
+                  {race.time && <span>{race.time}</span>}
                 </div>
               </motion.div>
             ))}
@@ -225,7 +253,7 @@ export default function RunningPage() {
       </section>
 
       {/* Strava CTA */}
-      <section className="relative py-32 px-6 border-t border-white/5">
+      <section className="relative py-32 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -233,27 +261,45 @@ export default function RunningPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white mb-4">
-              Follow the journey<span className="text-ember">.</span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Follow the journey<span className="text-accent">.</span>
             </h2>
-            <p className="text-white/40 mb-8 max-w-xl mx-auto">
+            <p className="text-foreground/40 mb-8 max-w-xl mx-auto">
               Track my training and adventures on Strava.
             </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#FC4C02] text-white font-semibold hover:bg-[#FC4C02]/90 rounded-none px-8"
-            >
-              <a
-                href="https://strava.com/athletes/chrisstjean"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#FC4C02] text-white font-semibold hover:bg-[#FC4C02]/90 rounded-none px-8"
               >
-                <StravaIcon className="w-5 h-5" />
-                Follow on Strava
-              </a>
-            </Button>
+                <a
+                  href={running.links.strava}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <StravaIcon className="w-5 h-5" />
+                  Follow on Strava
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-border text-foreground hover:bg-secondary hover:border-border rounded-none px-8"
+              >
+                <a
+                  href={running.links.ultrasignup}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-lg">🏃</span>
+                  UltraSignup Results
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>

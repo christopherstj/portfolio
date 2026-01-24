@@ -1,42 +1,292 @@
 {
-  "headline": "250 miles. One weekend.",
-  "philosophy": "The same persistence that gets you through mile 200 is what gets you through debugging at 2am. Ultrarunning taught me that the impossible just takes longer.",
+  "headline": "250 miles. 4 days.",
+  "philosophy": "Passion drives everything I do—from pushing past mile 200 to crafting the perfect user experience.",
   "stats": [
-    { "value": "12", "label": "Ultras Finished" },
-    { "value": "1,500+", "label": "Miles Run" },
+    { "value": "30,000+", "label": "Miles Run" },
+    { "value": "4M+", "label": "Feet of Gain" },
     { "value": "7th", "label": "Cocodona 250" },
-    { "value": "Top 10", "label": "Javelina 100" }
+    { "value": "4× Win", "label": "Race Wins" }
+  ],
+  "links": {
+    "strava": "https://www.strava.com/athletes/22686051",
+    "ultrasignup": "https://ultrasignup.com/results_participant.aspx?fname=Christopher&lname=St.+Jean"
+  },
+  "featuredRoutes": [
+    {
+      "id": "cocodona",
+      "name": "Cocodona 250",
+      "distance": "250mi",
+      "elevation": "40,000 ft",
+      "result": "7th Place (2023)",
+      "routeUrl": "/routes/cocodona.geojson"
+    },
+    {
+      "id": "javelina",
+      "name": "Javelina Jundred",
+      "distance": "100mi",
+      "elevation": "7,000 ft",
+      "result": "9th Place (2021)",
+      "routeUrl": "/routes/javelina.geojson"
+    },
+    {
+      "id": "camino-cielo",
+      "name": "Camino Cielo Loop",
+      "distance": "45mi",
+      "elevation": "14,000 ft",
+      "result": "Male Supported FKT",
+      "routeUrl": "/routes/camino-cielo.gpx"
+    }
   ],
   "races": [
     {
-      "id": "cocodona-2024",
-      "name": "Cocodona 250",
-      "year": 2024,
-      "distance": "250mi",
-      "elevation": "45,000 ft",
-      "place": "7th",
-      "time": "~80 hours",
-      "location": "Black Canyon City → Flagstaff, AZ",
-      "highlight": "Career Best",
-      "description": "One of the most challenging 250-mile races in the world. 250 miles through the Arizona desert, climbing from 2,000 ft to over 9,000 ft, finishing in Flagstaff.",
-      "image": "/images/running/cocodona.jpg",
-      "featured": true,
-      "elevationData": [2500, 2800, 3200, 4100, 5200, 6100, 7200, 7800, 7000, 6200, 5800, 6500, 7100, 7400, 6800, 5500, 4200, 3800, 4500, 5200, 6000, 6800, 7200, 7000]
+      "id": "mauna-kea-fkt-2026",
+      "name": "Mauna Kea Sea-to-Summit",
+      "year": 2026,
+      "distance": "25mi",
+      "elevation": "14,000 ft",
+      "place": "FKT",
+      "time": "9:12:38",
+      "location": "Hawaii",
+      "highlight": "Mixed-Gender FKT",
+      "featured": true
     },
     {
-      "id": "javelina-2023",
-      "name": "Javelina Jundred",
+      "id": "camino-cielo-fkt-2025",
+      "name": "Camino Cielo Loop",
+      "year": 2025,
+      "distance": "47mi",
+      "elevation": "14,000 ft",
+      "place": "FKT",
+      "time": "10:09:43",
+      "location": "Santa Barbara, CA",
+      "highlight": "Male Supported FKT",
+      "featured": true
+    },
+    {
+      "id": "athens-big-fork-2025",
+      "name": "Athens Big Fork Trail Marathon",
+      "year": 2025,
+      "distance": "26.2mi",
+      "elevation": "7,000 ft",
+      "place": "1st",
+      "time": "4:00:17",
+      "location": "Ouachita Mountains, AR",
+      "highlight": "Win + Course Record",
+      "featured": true
+    },
+    {
+      "id": "avalon-2026",
+      "name": "Avalon Benefit 50",
+      "year": 2026,
+      "distance": "50mi",
+      "place": "7th",
+      "time": "7:20:41",
+      "location": "Avalon, CA",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "javelina-31k-2025",
+      "name": "Javelina Jundred - Jackass 31K",
+      "year": 2025,
+      "distance": "31K",
+      "place": "3rd",
+      "time": "2:08:07",
+      "location": "McDowell, AZ",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "baldface-2024",
+      "name": "Baldface Scramble",
+      "year": 2024,
+      "distance": "29K",
+      "place": "2nd",
+      "time": "3:25:52",
+      "location": "Chatham, NH",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "tushars-2024",
+      "name": "Tushars Mountain Runs",
+      "year": 2024,
+      "distance": "26.2mi",
+      "place": "3rd",
+      "time": "4:43:18",
+      "location": "Beaver, UT",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "coldwater-2024",
+      "name": "Coldwater Rumble",
+      "year": 2024,
+      "distance": "60K",
+      "elevation": "3,000 ft",
+      "place": "1st",
+      "time": "4:34:45",
+      "location": "Goodyear, AZ",
+      "highlight": "Win + Course Record",
+      "featured": true
+    },
+    {
+      "id": "colorado-cold-rush-2023",
+      "name": "Colorado Cold Rush Ultra",
       "year": 2023,
+      "distance": "Half Marathon",
+      "place": "1st",
+      "time": "1:34:29",
+      "location": "Colorado Springs, CO",
+      "highlight": "Win",
+      "featured": false
+    },
+    {
+      "id": "cocodona-2023",
+      "name": "Cocodona 250",
+      "year": 2023,
+      "distance": "250mi",
+      "elevation": "40,000 ft",
+      "place": "7th",
+      "time": "81:13:24",
+      "location": "Black Canyon City, AZ",
+      "highlight": "Career Best",
+      "description": "One of the most challenging 250-mile races in the world. 250 miles through the Arizona desert, climbing from 2,000 ft to over 9,000 ft, finishing in Flagstaff.",
+      "featured": true
+    },
+    {
+      "id": "black-canyon-2023",
+      "name": "Black Canyon Ultras",
+      "year": 2023,
+      "distance": "100K",
+      "place": "38th",
+      "time": "10:12:19",
+      "location": "Mayer, AZ",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "colossal-vail-2022",
+      "name": "Colossal-Vail 50/50",
+      "year": 2022,
+      "distance": "55K",
+      "place": "2nd",
+      "time": "4:24:48",
+      "location": "Vail, AZ",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "speedgoat-50k-2022",
+      "name": "Speedgoat Mountain Races",
+      "year": 2022,
+      "distance": "50K",
+      "place": "56th",
+      "time": "7:38:56",
+      "location": "Snowbird Resort, UT",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "speedgoat-18k-2022",
+      "name": "Speedgoat Mountain Races",
+      "year": 2022,
+      "distance": "18K",
+      "place": "4th",
+      "time": null,
+      "location": "Snowbird Resort, UT",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "scout-mountain-2022",
+      "name": "Scout Mountain Ultras",
+      "year": 2022,
+      "distance": "50mi",
+      "place": "4th",
+      "time": "9:05:07",
+      "location": "Pocatello, ID",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "nine-trails-2022",
+      "name": "Nine Trails 35",
+      "year": 2022,
+      "distance": "35mi",
+      "place": "5th",
+      "time": "6:36:29",
+      "location": "Santa Barbara, CA",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "nine-trails-2021",
+      "name": "Nine Trails 35",
+      "year": 2021,
+      "distance": "35mi",
+      "place": "12th",
+      "time": "7:23:36",
+      "location": "Santa Barbara, CA",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "javelina-2021",
+      "name": "Javelina Jundred",
+      "year": 2021,
       "distance": "100mi",
-      "elevation": "5,500 ft",
-      "place": "Top 10",
-      "time": "~19 hours",
-      "location": "McDowell Mountain Park, AZ",
+      "elevation": "7,000 ft",
+      "place": "9th",
+      "time": "17:28:31",
+      "location": "McDowell, AZ",
       "highlight": null,
       "description": "A classic desert 100-miler through the Sonoran Desert. Fast course, hot conditions, incredible community.",
-      "image": "/images/running/javelina.jpg",
-      "featured": true,
-      "elevationData": [1500, 1800, 2100, 1900, 1600, 1800, 2000, 1700, 1500, 1800, 2100, 1900, 1600]
+      "featured": true
+    },
+    {
+      "id": "deep-creek-2021",
+      "name": "Deep Creek Trail Half Marathon",
+      "year": 2021,
+      "distance": "Half Marathon",
+      "place": "4th",
+      "time": "1:55:46",
+      "location": "Telluride, CO",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "gunstock-2021",
+      "name": "Gunstock (Giddyup Pineland)",
+      "year": 2021,
+      "distance": "50mi",
+      "place": "8th",
+      "time": "8:40:14",
+      "location": "Gilford, NH",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "tillamook-2021",
+      "name": "Tillamook Burn",
+      "year": 2021,
+      "distance": "50mi",
+      "place": "11th",
+      "time": "8:05:30",
+      "location": "Tillamook State Forest, OR",
+      "highlight": null,
+      "featured": false
+    },
+    {
+      "id": "avalon-2020",
+      "name": "Avalon Benefit 50",
+      "year": 2020,
+      "distance": "50mi",
+      "place": "5th",
+      "time": "7:11:28",
+      "location": "Avalon, CA",
+      "highlight": null,
+      "featured": false
     }
   ]
 }

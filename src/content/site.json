@@ -9,8 +9,8 @@
   "availability": "Available for freelance projects",
   "social": {
     "github": "https://github.com/christopherstj",
-    "linkedin": "https://linkedin.com/in/chrisstjean",
-    "strava": "https://strava.com/athletes/chrisstjean",
+    "linkedin": "https://www.linkedin.com/in/christopherrstjean/",
+    "strava": "https://www.strava.com/athletes/22686051",
     "twitter": null
   },
   "hero": {
@@ -26,5 +26,11 @@
     "year": 2020,
     "concentration": "Software Engineering",
     "honors": "Magna Cum Laude"
-  }
+  },
+  "homeStats": [
+    { "value": "6+", "label": "Years Shipping Code" },
+    { "value": "6 Weeks", "label": "Full App (Web + Mobile)" },
+    { "value": "2×", "label": "Signups & Conversions" },
+    { "value": "30,000+", "label": "Miles Run" }
+  ]
 }

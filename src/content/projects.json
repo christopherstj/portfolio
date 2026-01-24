@@ -26,14 +26,14 @@
       "name": "Standard Communities",
       "url": null,
       "github": null,
-      "description": "Built a proprietary data tool for the affordable housing universe that drove multi-million dollar deal making decisions. Full ownership of the stack: data ingestion, LLM enhancements, confidence-scored joining, and unified frontend.",
+      "description": "Built a proprietary data tool for the affordable housing universe that drove multi-million dollar deal making decisions. Full ownership of the stack: Python data pipelines, LLM enhancements, confidence-scored joining, and unified frontend.",
       "image": null,
-      "stack": ["Next.js", "Supabase", "Vercel", "Render", "Modal", "Flash LLMs"],
+      "stack": ["Python", "Next.js", "Supabase", "Vercel", "Render", "Modal", "Flash LLMs"],
       "role": "Co-Founder, Frontend & Growth Lead",
       "period": "December 2025 - Present",
       "highlights": [
         "Multi-million dollar deal making impact",
-        "AI-powered data enhancements with Flash LLMs",
+        "Python data pipelines with LLM enhancements",
         "Rapid iteration with regular end-user feedback"
       ]
     },
@@ -58,25 +58,30 @@
       "name": "33Floors",
       "url": null,
       "github": null,
-      "description": "Team lead for customer-facing software development. Partnered with CTO/CEO to translate business needs into features, thriving in ambiguity and leveraging AI to accelerate delivery.",
+      "description": "Team lead for customer-facing software development. Built high-performance Python ETL pipelines processing hundreds of GBs of real estate data. Partnered with CTO/CEO to translate business needs into features.",
       "image": null,
-      "stack": ["React", "Next.js", "TypeScript", ".NET", "SQL"],
+      "stack": ["Python", "React", "Next.js", "TypeScript", ".NET", "SQL"],
       "role": "Software Developer & Team Lead",
       "period": "May 2020 - December 2025",
       "highlights": [
-        "ETL pipeline: 100s of GB in <30 minutes",
+        "Python ETL pipelines: 100s of GB in <30 min",
         "Led small engineering team end-to-end",
         "AI-accelerated development and testing"
       ]
     },
     {
-      "id": "portfolio",
-      "name": "This Portfolio",
-      "url": "https://chrisstjean.com",
-      "github": "https://github.com/christopherstj/portfolio",
-      "description": "A topographic-themed portfolio site with animated contour lines, parallax mountains, glassmorphism, and dark/light mode. Built with AI-powered development.",
+      "id": "portfolio-sites",
+      "name": "Portfolio Sites",
+      "url": "https://nicholaspopkey.com",
+      "github": null,
+      "description": "Bringing creative vision to life for artists, entrepreneurs, and makers. I craft bespoke portfolio sites that don't just showcase work—they tell stories. Bold aesthetics, buttery animations, and pixel-perfect attention to detail that makes people stop scrolling.",
       "image": null,
-      "stack": ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Framer Motion", "shadcn/ui"]
+      "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+      "highlights": [
+        "Custom designs tailored to each creative's brand",
+        "Performance-optimized for instant load times",
+        "AI-accelerated development for rapid delivery"
+      ]
     }
   ]
 }

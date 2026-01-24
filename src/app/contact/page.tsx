@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
-import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/ContactForm";
 
 // Strava icon
 function StravaIcon({ className }: { className?: string }) {
@@ -25,6 +25,11 @@ const socialLinks = [
 export default function ContactPage() {
   const site = getSiteConfig();
 
+  // Filter out null social links
+  const activeSocialLinks = socialLinks.filter(
+    (social) => site.social[social.key as keyof typeof site.social]
+  );
+
   return (
     <>
       <StrikingBackground />
@@ -32,36 +37,28 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="min-h-[70vh] flex items-center relative px-6 pt-32">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Main CTA */}
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Left - Header + Form */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-xs font-mono text-ember uppercase tracking-widest">
+              <span className="text-xs font-mono text-accent uppercase tracking-widest">
                 Contact
               </span>
-              <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl font-bold text-white mt-4 leading-[0.9]">
+              <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mt-4 leading-[0.9]">
                 Let&apos;s<br />
-                <span className="text-ember">talk</span><span className="text-white/20">.</span>
+                <span className="text-accent">talk</span><span className="text-foreground/20">.</span>
               </h1>
-              <p className="text-lg sm:text-xl text-white/40 max-w-lg mt-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-foreground/40 max-w-lg mt-8 mb-12 leading-relaxed">
                 Have a project in mind? Looking for a technical partner? 
-                Or just want to chat about ultrarunning and code?
+                Send me a message and I&apos;ll get back to you soon.
               </p>
               
-              <div className="mt-10">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-ember text-black font-semibold hover:bg-ember/90 rounded-none px-10 py-6 text-lg"
-                >
-                  <a href={`mailto:${site.email}`}>
-                    <Mail className="w-5 h-5 mr-2" />
-                    Send an Email
-                  </a>
-                </Button>
+              {/* Contact Form */}
+              <div className="edge-card p-6 sm:p-8">
+                <ContactForm />
               </div>
             </motion.div>
 
@@ -70,54 +67,63 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-8 lg:sticky lg:top-32"
             >
-              {/* Email */}
+              {/* Email - now just display, form handles sending */}
               <div className="edge-card p-6">
-                <div className="text-xs font-mono text-white/30 uppercase tracking-widest mb-3">
+                <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">
                   Email
                 </div>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-bold text-white hover:text-ember transition-colors"
-                >
+                <div className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-bold text-foreground">
                   {site.email}
-                </a>
+                </div>
               </div>
 
               {/* Location */}
               <div className="edge-card p-6">
-                <div className="text-xs font-mono text-white/30 uppercase tracking-widest mb-3">
+                <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">
                   Location
                 </div>
-                <div className="flex items-center gap-2 text-white/60">
-                  <MapPin className="w-4 h-4 text-ember" />
+                <div className="flex items-center gap-2 text-foreground/60">
+                  <MapPin className="w-4 h-4 text-accent" />
                   <span>{site.location.name}</span>
                 </div>
               </div>
 
               {/* Social */}
-              <div className="edge-card p-6">
-                <div className="text-xs font-mono text-white/30 uppercase tracking-widest mb-4">
-                  Connect
+              {activeSocialLinks.length > 0 && (
+                <div className="edge-card p-6">
+                  <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-4">
+                    Connect
+                  </div>
+                  <div className="flex gap-3">
+                    {activeSocialLinks.map((social) => {
+                      const Icon = social.icon;
+                      const href = site.social[social.key as keyof typeof site.social];
+                      return (
+                        <a
+                          key={social.key}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-12 h-12 flex items-center justify-center border border-border text-foreground/40 hover:text-accent hover:border-accent/30 transition-all"
+                          aria-label={social.label}
+                        >
+                          <Icon className="w-5 h-5" />
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="flex gap-3">
-                  {socialLinks.map((social) => {
-                    const Icon = social.icon;
-                    const href = site.social[social.key as keyof typeof site.social];
-                    return (
-                      <a
-                        key={social.key}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 flex items-center justify-center border border-white/10 text-white/40 hover:text-ember hover:border-ember/30 transition-all"
-                        aria-label={social.label}
-                      >
-                        <Icon className="w-5 h-5" />
-                      </a>
-                    );
-                  })}
+              )}
+
+              {/* Response time */}
+              <div className="edge-card p-6">
+                <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">
+                  Response Time
+                </div>
+                <div className="text-foreground/60">
+                  Usually within <span className="text-accent font-semibold">24 hours</span>
                 </div>
               </div>
             </motion.div>
@@ -126,7 +132,7 @@ export default function ContactPage() {
       </section>
 
       {/* What I can help with */}
-      <section className="relative py-32 px-6 border-t border-white/5">
+      <section className="relative py-32 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -135,11 +141,11 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <span className="text-xs font-mono text-white/30 uppercase tracking-widest">
+            <span className="text-xs font-mono text-foreground/30 uppercase tracking-widest">
               Services
             </span>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white mt-4">
-              What I can help with<span className="text-ember">.</span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4">
+              What I can help with<span className="text-accent">.</span>
             </h2>
           </motion.div>
 
@@ -178,44 +184,15 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 group"
               >
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-white mb-3 group-hover:text-ember transition-colors">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-white/40 text-sm leading-relaxed">
+                <p className="text-foreground/40 text-sm leading-relaxed">
                   {service.desc}
                 </p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="relative py-32 px-6 border-t border-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-white mb-6">
-              Ready to start<span className="text-ember">?</span>
-            </h2>
-            <p className="text-lg text-white/40 mb-10 max-w-2xl mx-auto">
-              Every great project starts with a conversation. 
-              Let&apos;s discuss your ideas and see how we can bring them to life.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-ember text-black font-semibold hover:bg-ember/90 rounded-none px-12 py-6 text-lg"
-            >
-              <a href={`mailto:${site.email}`}>
-                Send Me an Email
-              </a>
-            </Button>
-          </motion.div>
         </div>
       </section>
     </>

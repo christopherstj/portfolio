@@ -4,20 +4,30 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme";
 import { cn } from "@/lib/utils";
+import { getSiteConfig } from "@/lib/content";
+
+function StravaIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+    </svg>
+  );
+}
 
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/running", label: "Running" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Journey" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function Navigation() {
+  const site = getSiteConfig();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -78,8 +88,36 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Right side - Theme toggle + CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Right side - Social + Theme toggle + CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href={site.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-foreground/40 hover:text-accent transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-foreground/40 hover:text-accent transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href={site.social.strava}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-foreground/40 hover:text-accent transition-colors"
+              aria-label="Strava"
+            >
+              <StravaIcon className="w-4 h-4" />
+            </a>
+            <div className="w-px h-4 bg-border mx-1" />
             <ThemeToggle />
             <Button asChild size="sm" className="bg-accent text-accent-foreground font-semibold hover:bg-accent/90 rounded-none">
               <Link href="/contact">Let&apos;s Talk</Link>
@@ -158,6 +196,37 @@ export function Navigation() {
                     </Link>
                   </motion.div>
                 ))}
+              </div>
+
+              {/* Social Links */}
+              <div className="px-6 mt-8 flex gap-4">
+                <a
+                  href={site.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-foreground/40 hover:text-accent border border-border hover:border-accent/30 transition-all"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-foreground/40 hover:text-accent border border-border hover:border-accent/30 transition-all"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href={site.social.strava}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 text-foreground/40 hover:text-accent border border-border hover:border-accent/30 transition-all"
+                  aria-label="Strava"
+                >
+                  <StravaIcon className="w-5 h-5" />
+                </a>
               </div>
 
               {/* CTA */}

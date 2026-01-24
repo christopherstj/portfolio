@@ -24,7 +24,7 @@ const footerLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/running", label: "Running" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Journey" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -75,6 +75,7 @@ export function Footer() {
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 const href = site.social[social.href as keyof typeof site.social];
+                if (!href) return null;
                 return (
                   <a
                     key={social.href}

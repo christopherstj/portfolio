@@ -23,19 +23,19 @@ export default function ProjectsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-mono text-ember uppercase tracking-widest">
+            <span className="text-xs font-mono text-accent uppercase tracking-widest">
               Projects
             </span>
-            <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl font-bold text-white mt-4">
+            <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mt-4">
               Things I&apos;ve<br />
-              <span className="text-ember">built</span><span className="text-white/20">.</span>
+              <span className="text-accent">built</span><span className="text-foreground/20">.</span>
             </h1>
           </motion.div>
         </div>
       </section>
 
       {/* Featured Project - PathQuest with iframe */}
-      <section className="relative py-16 px-6 border-t border-white/5">
+      <section className="relative py-16 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -50,8 +50,8 @@ export default function ProjectsPage() {
                   <span className="tag">Featured</span>
                   <span className="tag">{projects.featured.status}</span>
                 </div>
-                <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white">
-                  {projects.featured.name}<span className="text-ember">.</span>
+                <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground">
+                  {projects.featured.name}<span className="text-accent">.</span>
                 </h2>
               </div>
               <div className="flex gap-3">
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                   <Button
                     asChild
                     size="sm"
-                    className="bg-ember text-black font-semibold hover:bg-ember/90 rounded-none"
+                    className="bg-accent text-accent-foreground font-semibold hover:bg-accent/90 rounded-none"
                   >
                     <a
                       href={projects.featured.url}
@@ -80,12 +80,12 @@ export default function ProjectsPage() {
                 {/* Iframe container */}
                 <motion.div 
                   className={`relative transition-all duration-500 ${
-                    iframeExpanded ? 'h-[80vh]' : 'h-[500px]'
+                    iframeExpanded ? 'h-[85vh]' : 'h-[650px]'
                   }`}
                   layout
                 >
                   {/* Loading state / placeholder */}
-                  <div className="absolute inset-0 bg-white/[0.02] flex items-center justify-center">
+                  <div className="absolute inset-0 bg-foreground/[0.02] flex items-center justify-center">
                     <div className="text-center">
                       <motion.div
                         animate={{ scale: [1, 1.1, 1] }}
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
                       >
                         🏔️
                       </motion.div>
-                      <div className="text-white/30 text-sm font-mono">Loading PathQuest...</div>
+                      <div className="text-foreground/30 text-sm font-mono">Loading PathQuest...</div>
                     </div>
                   </div>
                   
@@ -116,15 +116,15 @@ export default function ProjectsPage() {
                   {/* Expand button */}
                   <button
                     onClick={() => setIframeExpanded(!iframeExpanded)}
-                    className="absolute bottom-4 right-4 p-2 bg-black/60 border border-white/10 text-white/60 hover:text-ember hover:border-ember/30 transition-all z-10"
+                    className="absolute bottom-4 right-4 p-2 bg-background/60 border border-border text-foreground/60 hover:text-accent hover:border-accent/30 transition-all z-10"
                   >
                     <Maximize2 className="w-4 h-4" />
                   </button>
                 </motion.div>
 
                 {/* Info bar */}
-                <div className="p-6 border-t border-white/5">
-                  <p className="text-white/50 mb-6 leading-relaxed">
+                <div className="p-6 border-t border-border">
+                  <p className="text-foreground/50 mb-6 leading-relaxed">
                     {projects.featured.description}
                   </p>
 
@@ -137,9 +137,9 @@ export default function ProjectsPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
-                        className="flex items-center gap-3 text-white/60 text-sm"
+                        className="flex items-center gap-3 text-foreground/60 text-sm"
                       >
-                        <div className="w-1.5 h-1.5 bg-ember" />
+                        <div className="w-1.5 h-1.5 bg-accent" />
                         {feature}
                       </motion.div>
                     ))}
@@ -150,7 +150,7 @@ export default function ProjectsPage() {
                     {projects.featured.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs font-mono text-white/30 px-3 py-1.5 border border-white/10"
+                        className="tag"
                       >
                         {tech}
                       </span>
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Other Projects / Work Experience */}
-      <section className="relative py-16 px-6 border-t border-white/5">
+      <section className="relative py-16 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -173,11 +173,11 @@ export default function ProjectsPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <span className="text-xs font-mono text-white/30 uppercase tracking-widest">
+            <span className="text-xs font-mono text-foreground/30 uppercase tracking-widest">
               Experience
             </span>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white mt-4">
-              Other work<span className="text-ember">.</span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4">
+              Other work<span className="text-accent">.</span>
             </h2>
           </motion.div>
 
@@ -192,7 +192,7 @@ export default function ProjectsPage() {
               >
                 <div className="edge-card p-6 h-full group">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-white group-hover:text-ember transition-colors">
+                    <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-foreground group-hover:text-accent transition-colors">
                       {project.name}
                     </h3>
                     <div className="flex gap-2">
@@ -201,7 +201,7 @@ export default function ProjectsPage() {
                           href={project.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 text-white/30 hover:text-ember transition-colors"
+                          className="p-2 text-foreground/30 hover:text-accent transition-colors"
                         >
                           <ArrowUpRight className="w-4 h-4" />
                         </a>
@@ -211,7 +211,7 @@ export default function ProjectsPage() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 text-white/30 hover:text-white transition-colors"
+                          className="p-2 text-foreground/30 hover:text-foreground transition-colors"
                         >
                           <Github className="w-4 h-4" />
                         </a>
@@ -223,15 +223,15 @@ export default function ProjectsPage() {
                   {(project.role || project.period) && (
                     <div className="mb-4">
                       {project.role && (
-                        <div className="text-ember text-sm font-medium">{project.role}</div>
+                        <div className="text-accent text-sm font-medium">{project.role}</div>
                       )}
                       {project.period && (
-                        <div className="text-white/30 text-xs font-mono">{project.period}</div>
+                        <div className="text-foreground/30 text-xs font-mono">{project.period}</div>
                       )}
                     </div>
                   )}
                   
-                  <p className="text-white/40 mb-4 text-sm leading-relaxed">
+                  <p className="text-foreground/40 mb-4 text-sm leading-relaxed">
                     {project.description}
                   </p>
 
@@ -239,8 +239,8 @@ export default function ProjectsPage() {
                   {project.highlights && project.highlights.length > 0 && (
                     <div className="mb-4 space-y-1">
                       {project.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-white/50 text-xs">
-                          <div className="w-1 h-1 bg-ember" />
+                        <div key={idx} className="flex items-center gap-2 text-foreground/50 text-xs">
+                          <div className="w-1 h-1 bg-accent" />
                           {highlight}
                         </div>
                       ))}
@@ -251,7 +251,7 @@ export default function ProjectsPage() {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs font-mono text-white/30 px-2 py-1 border border-white/5"
+                        className="tag"
                       >
                         {tech}
                       </span>
@@ -265,7 +265,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-32 px-6 border-t border-white/5">
+      <section className="relative py-32 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -273,16 +273,16 @@ export default function ProjectsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-white mb-4">
-              Have a project in mind<span className="text-ember">?</span>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Have a project in mind<span className="text-accent">?</span>
             </h2>
-            <p className="text-white/40 mb-8 max-w-xl mx-auto">
+            <p className="text-foreground/40 mb-8 max-w-xl mx-auto">
               I&apos;m always excited to work on new challenges. Let&apos;s discuss how I can help.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-ember text-black font-semibold hover:bg-ember/90 rounded-none px-8"
+              className="bg-accent text-accent-foreground font-semibold hover:bg-accent/90 rounded-none px-8"
             >
               <a href="/contact">Start a Conversation</a>
             </Button>

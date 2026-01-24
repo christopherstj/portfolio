@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { getSiteConfig, getProjects, getRunning } from "@/lib/content";
 import { Button } from "@/components/ui/button";
@@ -32,17 +33,38 @@ export default function HomePage() {
             </span>
           </motion.div>
 
-          {/* Main headline - MASSIVE */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-[family-name:var(--font-display)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-foreground leading-[0.85] tracking-tight mb-8"
-          >
-            <span className="block">I build</span>
-            <span className="block text-accent">software</span>
-            <span className="block text-foreground/20">that moves.</span>
-          </motion.h1>
+          {/* Main headline with headshot */}
+          <div className="flex items-start gap-8 lg:gap-12 mb-8">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="font-[family-name:var(--font-display)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-foreground leading-[0.85] tracking-tight"
+            >
+              <span className="block">I build</span>
+              <span className="block text-accent">software</span>
+              <span className="block text-foreground/20">that moves.</span>
+            </motion.h1>
+
+            {/* Headshot - next to title */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="hidden md:block shrink-0 self-center"
+            >
+              <div className="relative w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80">
+                <div className="absolute inset-0 bg-accent/20 -rotate-3" />
+                <Image
+                  src="/images/post-coco.jpg"
+                  alt="Chris St. Jean"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
 
           {/* Subtitle */}
           <motion.p
@@ -82,7 +104,7 @@ export default function HomePage() {
             </Button>
           </motion.div>
 
-          {/* Stats row */}
+          {/* Stats row - Professional highlights */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -90,17 +112,17 @@ export default function HomePage() {
             className="mt-24 pt-12 border-t border-border"
           >
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-              {running.stats.map((stat, i) => (
+              {site.homeStats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7 + i * 0.1 }}
                 >
-                  <div className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground stat-number">
+                  <div className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-accent stat-number">
                     {stat.value}
                   </div>
-                  <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mt-1">
+                  <div className="text-sm font-mono text-foreground/60 uppercase tracking-wider mt-2">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -151,11 +173,11 @@ export default function HomePage() {
                     </p>
 
                     {/* Tech stack */}
-                    <div className="flex flex-wrap gap-3 mb-8">
+                    <div className="flex flex-wrap gap-2 mb-8">
                       {projects.featured.stack.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-mono text-foreground/30 px-3 py-1 border border-border"
+                          className="tag"
                         >
                           {tech}
                         </span>
@@ -168,10 +190,21 @@ export default function HomePage() {
                     </div>
                   </div>
                   
-                  {/* Visual placeholder */}
-                  <div className="relative aspect-video bg-secondary border border-border flex items-center justify-center">
-                    <div className="text-6xl">🏔️</div>
-                    <div className="absolute bottom-4 right-4 text-xs font-mono text-foreground/20">
+                  {/* Live mobile preview */}
+                  <div className="relative flex justify-center">
+                    <div className="relative w-[280px] h-[560px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-foreground/10">
+                      {/* Phone notch */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-b-2xl z-10" />
+                      {/* Screen */}
+                      <div className="w-full h-full rounded-[2.25rem] overflow-hidden bg-secondary">
+                        <iframe
+                          src="https://pathquest.app"
+                          className="w-[375px] h-[812px] origin-top-left scale-[0.688]"
+                          title="PathQuest App Preview"
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-xs font-mono text-foreground/40">
                       pathquest.app
                     </div>
                   </div>
@@ -249,9 +282,9 @@ export default function HomePage() {
                     Ultra Running
                   </span>
                   <h2 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mt-4">
-                    250 miles<span className="text-accent">.</span>
+                    22 Races<span className="text-accent">.</span>
                     <br />
-                    <span className="text-foreground/20">One weekend.</span>
+                    <span className="text-foreground/20">Endless Passion.</span>
                   </h2>
                 </div>
                 <div className="flex items-center gap-2 text-accent font-medium group-hover:gap-3 transition-all">
@@ -273,13 +306,39 @@ export default function HomePage() {
                     <div className="font-[family-name:var(--font-display)] text-3xl font-bold text-accent stat-number">
                       {stat.value}
                     </div>
-                    <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mt-2">
+                    <div className="text-sm font-mono text-foreground/60 uppercase tracking-wider mt-2">
                       {stat.label}
                     </div>
                   </motion.div>
                 ))}
               </div>
             </Link>
+
+            {/* External links */}
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a
+                href={running.links.strava}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-mono text-foreground/60 hover:text-accent transition-colors"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+                </svg>
+                Strava
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+              <a
+                href={running.links.ultrasignup}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-mono text-foreground/60 hover:text-accent transition-colors"
+              >
+                <span className="text-lg">🏃</span>
+                UltraSignup
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
