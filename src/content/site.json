@@ -1,0 +1,30 @@
+{
+  "name": "Chris St Jean",
+  "tagline": "AI-Empowered Software Engineer. Ultrarunner. Peak Bagger.",
+  "location": {
+    "name": "Santa Barbara, CA",
+    "coordinates": { "lat": 34.4208, "lng": -119.6982 }
+  },
+  "email": "chris.r.stjean@gmail.com",
+  "availability": "Available for freelance projects",
+  "social": {
+    "github": "https://github.com/christopherstj",
+    "linkedin": "https://linkedin.com/in/chrisstjean",
+    "strava": "https://strava.com/athletes/chrisstjean",
+    "twitter": null
+  },
+  "hero": {
+    "headline": "I build software that moves.",
+    "subline": "AI-empowered engineer with 6+ years shipping high-quality software that delivers measurable impact. Elite ultrarunner building next-gen outdoor tech."
+  },
+  "meta": {
+    "title": "Chris St Jean | AI-Empowered Software Engineer",
+    "description": "Portfolio of Chris St Jean - AI-empowered software engineer with 6+ years experience in TypeScript, React/Next.js, Node.js, and geospatial apps. Elite ultrarunner and peak bagger based in Santa Barbara, CA."
+  },
+  "education": {
+    "school": "Babson College",
+    "year": 2020,
+    "concentration": "Software Engineering",
+    "honors": "Magna Cum Laude"
+  }
+}

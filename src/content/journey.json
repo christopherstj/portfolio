@@ -1,0 +1,57 @@
+{
+  "intro": "From building a house on wheels to building software that moves people. Every mile, every line of code, every summit has led here.",
+  "timeline": [
+    {
+      "id": "van-build",
+      "title": "Built a House on Wheels",
+      "period": "2020-2022",
+      "description": "Converted a cargo van into a mobile home. Designed the layout, installed solar, built custom cabinetry. Lived on the road for 2 years, working remotely and chasing trails.",
+      "location": {
+        "name": "The Open Road",
+        "coordinates": null
+      },
+      "image": "/images/journey/van.jpg",
+      "type": "adventure",
+      "highlights": ["Full electrical system", "Custom woodwork", "Off-grid capable"]
+    },
+    {
+      "id": "flagstaff",
+      "title": "Flagstaff, AZ",
+      "period": "2022",
+      "description": "Landed in the mountains at 7,000 feet. Started serious ultrarunning training. The high altitude and endless trails transformed my running.",
+      "location": {
+        "name": "Flagstaff, AZ",
+        "coordinates": { "lat": 35.198, "lng": -111.651 }
+      },
+      "image": "/images/journey/flagstaff.jpg",
+      "type": "location",
+      "highlights": ["7,000 ft elevation", "Coconino National Forest", "Ultra training base"]
+    },
+    {
+      "id": "colorado-springs",
+      "title": "Colorado Springs, CO",
+      "period": "2023",
+      "description": "High altitude training at its finest. Garden of the Gods, Pikes Peak, and endless fourteeners. Started building PathQuest to track my peak bagging adventures.",
+      "location": {
+        "name": "Colorado Springs, CO",
+        "coordinates": { "lat": 38.834, "lng": -104.821 }
+      },
+      "image": "/images/journey/colorado-springs.jpg",
+      "type": "location",
+      "highlights": ["6,000 ft elevation", "Pikes Peak access", "PathQuest origins"]
+    },
+    {
+      "id": "santa-barbara",
+      "title": "Santa Barbara, CA",
+      "period": "2024-Present",
+      "description": "Current home base. Ocean trails, mountain runs, and the perfect climate for year-round training. Building the next generation of outdoor tech.",
+      "location": {
+        "name": "Santa Barbara, CA",
+        "coordinates": { "lat": 34.4208, "lng": -119.6982 }
+      },
+      "image": "/images/journey/santa-barbara.jpg",
+      "type": "location",
+      "highlights": ["Ocean + mountains", "Year-round training", "PathQuest HQ"]
+    }
+  ]
+}

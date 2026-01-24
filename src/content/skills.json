@@ -1,0 +1,47 @@
+{
+  "summary": "AI-empowered engineer with 6+ years of expertise in TypeScript, React/Next.js, Node.js, Python, and SQL. Proven record of shipping high-quality, customer-facing software that delivers measurable impact.",
+  "categories": [
+    {
+      "name": "Frontend",
+      "icon": "monitor",
+      "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "PWA"]
+    },
+    {
+      "name": "Backend",
+      "icon": "server",
+      "items": ["Node.js", "Fastify", "Python", ".NET", "PostgreSQL", "PostGIS", "Supabase"]
+    },
+    {
+      "name": "AI & Tooling",
+      "icon": "brain",
+      "items": ["Cursor IDE", "Claude API", "Flash LLMs", "AI-Assisted Development", "High-Velocity Shipping"]
+    },
+    {
+      "name": "Infrastructure",
+      "icon": "cloud",
+      "items": ["Google Cloud Platform", "Vercel", "Render", "Modal", "Serverless", "ETL Pipelines"]
+    },
+    {
+      "name": "Mobile",
+      "icon": "smartphone",
+      "items": ["React Native", "Expo", "PWA", "Cross-Platform"]
+    },
+    {
+      "name": "Geospatial",
+      "icon": "map",
+      "items": ["Mapbox", "PostGIS", "OpenStreetMap", "LiDAR/DEM", "GPS Processing"]
+    }
+  ],
+  "tools": [
+    { "name": "Cursor", "category": "AI IDE" },
+    { "name": "Claude", "category": "AI" },
+    { "name": "VS Code", "category": "IDE" },
+    { "name": "Figma", "category": "Design" },
+    { "name": "Linear", "category": "Project Management" },
+    { "name": "Git", "category": "Version Control" }
+  ],
+  "approach": {
+    "title": "AI-Empowered Development",
+    "description": "I embrace AI-powered development with Cursor to ideate, build, test, and deploy at very high velocity. This means shipping full-stack applications in weeks instead of months, while maintaining quality and translating user feedback into rapid iterations."
+  }
+}

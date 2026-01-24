@@ -1,0 +1,42 @@
+{
+  "headline": "250 miles. One weekend.",
+  "philosophy": "The same persistence that gets you through mile 200 is what gets you through debugging at 2am. Ultrarunning taught me that the impossible just takes longer.",
+  "stats": [
+    { "value": "12", "label": "Ultras Finished" },
+    { "value": "1,500+", "label": "Miles Run" },
+    { "value": "7th", "label": "Cocodona 250" },
+    { "value": "Top 10", "label": "Javelina 100" }
+  ],
+  "races": [
+    {
+      "id": "cocodona-2024",
+      "name": "Cocodona 250",
+      "year": 2024,
+      "distance": "250mi",
+      "elevation": "45,000 ft",
+      "place": "7th",
+      "time": "~80 hours",
+      "location": "Black Canyon City → Flagstaff, AZ",
+      "highlight": "Career Best",
+      "description": "One of the most challenging 250-mile races in the world. 250 miles through the Arizona desert, climbing from 2,000 ft to over 9,000 ft, finishing in Flagstaff.",
+      "image": "/images/running/cocodona.jpg",
+      "featured": true,
+      "elevationData": [2500, 2800, 3200, 4100, 5200, 6100, 7200, 7800, 7000, 6200, 5800, 6500, 7100, 7400, 6800, 5500, 4200, 3800, 4500, 5200, 6000, 6800, 7200, 7000]
+    },
+    {
+      "id": "javelina-2023",
+      "name": "Javelina Jundred",
+      "year": 2023,
+      "distance": "100mi",
+      "elevation": "5,500 ft",
+      "place": "Top 10",
+      "time": "~19 hours",
+      "location": "McDowell Mountain Park, AZ",
+      "highlight": null,
+      "description": "A classic desert 100-miler through the Sonoran Desert. Fast course, hot conditions, incredible community.",
+      "image": "/images/running/javelina.jpg",
+      "featured": true,
+      "elevationData": [1500, 1800, 2100, 1900, 1600, 1800, 2000, 1700, 1500, 1800, 2100, 1900, 1600]
+    }
+  ]
+}

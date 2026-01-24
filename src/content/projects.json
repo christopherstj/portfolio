@@ -1,0 +1,82 @@
+{
+  "featured": {
+    "id": "pathquest",
+    "name": "PathQuest",
+    "url": "https://pathquest.app",
+    "github": null,
+    "tagline": "Track your summits. Discover new peaks. Conquer challenges.",
+    "description": "A full-stack web and mobile platform for mountain peak baggers, built in ~6 weeks using AI-powered development. Integrates with Strava to automatically detect summit attempts, features powerfully interactive Mapbox visualizations, and transforms raw athlete activity data into actionable insights.",
+    "image": "/images/projects/pathquest-hero.png",
+    "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "Google Cloud"],
+    "features": [
+      "Full-stack web + cross-platform mobile app in 6 weeks",
+      "AI-powered development with Cursor for high-velocity shipping",
+      "Geospatial data pipelines (Strava + OpenStreetMap)",
+      "ML + LiDAR DEM scans for accurate peak coordinates",
+      "Scalable Google Cloud architecture (Cloud Run, serverless)",
+      "Direct user feedback loops with ultrarunning community"
+    ],
+    "status": "In Development",
+    "role": "Founding Developer",
+    "period": "October 2024 - Present"
+  },
+  "other": [
+    {
+      "id": "standard-communities",
+      "name": "Standard Communities",
+      "url": null,
+      "github": null,
+      "description": "Built a proprietary data tool for the affordable housing universe that drove multi-million dollar deal making decisions. Full ownership of the stack: data ingestion, LLM enhancements, confidence-scored joining, and unified frontend.",
+      "image": null,
+      "stack": ["Next.js", "Supabase", "Vercel", "Render", "Modal", "Flash LLMs"],
+      "role": "Co-Founder, Frontend & Growth Lead",
+      "period": "December 2025 - Present",
+      "highlights": [
+        "Multi-million dollar deal making impact",
+        "AI-powered data enhancements with Flash LLMs",
+        "Rapid iteration with regular end-user feedback"
+      ]
+    },
+    {
+      "id": "ai-endurance",
+      "name": "AI Endurance",
+      "url": "https://aiendurance.com",
+      "github": null,
+      "description": "Ground-up redesign of a legacy endurance training platform. Translated customer feedback into high-impact features that directly improved usability and engagement.",
+      "image": null,
+      "stack": ["Next.js", "React", "TypeScript", "Node.js", "PWA"],
+      "role": "Co-Founder, Frontend & Growth Lead",
+      "period": "September 2023 - November 2024",
+      "highlights": [
+        "2× increase in signups and conversions",
+        "100/100 Lighthouse performance scores",
+        "Hundreds of thousands of monthly page views"
+      ]
+    },
+    {
+      "id": "33floors",
+      "name": "33Floors",
+      "url": null,
+      "github": null,
+      "description": "Team lead for customer-facing software development. Partnered with CTO/CEO to translate business needs into features, thriving in ambiguity and leveraging AI to accelerate delivery.",
+      "image": null,
+      "stack": ["React", "Next.js", "TypeScript", ".NET", "SQL"],
+      "role": "Software Developer & Team Lead",
+      "period": "May 2020 - December 2025",
+      "highlights": [
+        "ETL pipeline: 100s of GB in <30 minutes",
+        "Led small engineering team end-to-end",
+        "AI-accelerated development and testing"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "name": "This Portfolio",
+      "url": "https://chrisstjean.com",
+      "github": "https://github.com/christopherstj/portfolio",
+      "description": "A topographic-themed portfolio site with animated contour lines, parallax mountains, glassmorphism, and dark/light mode. Built with AI-powered development.",
+      "image": null,
+      "stack": ["Next.js 16", "TypeScript", "Tailwind CSS 4", "Framer Motion", "shadcn/ui"]
+    }
+  ]
+}
