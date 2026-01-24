@@ -153,7 +153,7 @@ export function RaceMap({ routeUrl, name, className = "" }: RaceMapProps) {
           const parsed = parseGPX(data as string);
           if (!parsed) throw new Error("Could not parse GPX");
           geojsonData = parsed;
-          coordinates = parsed.geometry.coordinates;
+          coordinates = parsed.geometry.coordinates as [number, number][];
         }
 
         const bounds = getBounds(coordinates);

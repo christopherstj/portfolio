@@ -100,6 +100,7 @@ export default function ContactPage() {
                     {activeSocialLinks.map((social) => {
                       const Icon = social.icon;
                       const href = site.social[social.key as keyof typeof site.social];
+                      if (!href) return null;
                       return (
                         <a
                           key={social.key}
