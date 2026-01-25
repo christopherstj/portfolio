@@ -1,25 +1,42 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { ContactForm } from "@/components/ContactForm";
-
-// Strava icon
-function StravaIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
-    </svg>
-  );
-}
+import { StravaIcon } from "@/components/icons";
+import { FadeInOnScroll, FadeIn } from "@/components/animations";
 
 const socialLinks = [
   { key: "github", icon: Github, label: "GitHub" },
   { key: "linkedin", icon: Linkedin, label: "LinkedIn" },
   { key: "strava", icon: StravaIcon, label: "Strava" },
   { key: "twitter", icon: Twitter, label: "Twitter" },
+];
+
+const services = [
+  {
+    title: "Full-Stack Development",
+    desc: "End-to-end web and mobile applications built with modern frameworks.",
+  },
+  {
+    title: "AI Integration",
+    desc: "Add intelligent features to your existing products using LLMs and ML.",
+  },
+  {
+    title: "Technical Consulting",
+    desc: "Architecture reviews, tech stack decisions, and team guidance.",
+  },
+  {
+    title: "MVP Development",
+    desc: "Rapid prototyping to validate your idea and get to market fast.",
+  },
+  {
+    title: "Real-Time Systems",
+    desc: "GPS tracking, live updates, WebSockets - systems that need to be instant.",
+  },
+  {
+    title: "Code Review & Audit",
+    desc: "In-depth analysis of your codebase with actionable improvements.",
+  },
 ];
 
 export default function ContactPage() {
@@ -39,11 +56,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left - Header + Form */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <FadeIn>
               <span className="text-xs font-mono text-accent uppercase tracking-widest">
                 Contact
               </span>
@@ -60,15 +73,10 @@ export default function ContactPage() {
               <div className="edge-card p-6 sm:p-8">
                 <ContactForm />
               </div>
-            </motion.div>
+            </FadeIn>
 
             {/* Right - Contact info */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8 lg:sticky lg:top-32"
-            >
+            <FadeIn delay={0.2} className="space-y-8 lg:sticky lg:top-32">
               {/* Email - now just display, form handles sending */}
               <div className="edge-card p-6">
                 <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">
@@ -127,7 +135,7 @@ export default function ContactPage() {
                   Usually within <span className="text-accent font-semibold">24 hours</span>
                 </div>
               </div>
-            </motion.div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -135,63 +143,27 @@ export default function ContactPage() {
       {/* What I can help with */}
       <section className="relative py-32 px-6 border-t border-border">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
+          <FadeInOnScroll className="mb-12">
             <span className="text-xs font-mono text-foreground/30 uppercase tracking-widest">
               Services
             </span>
             <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4">
               What I can help with<span className="text-accent">.</span>
             </h2>
-          </motion.div>
+          </FadeInOnScroll>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Full-Stack Development",
-                desc: "End-to-end web and mobile applications built with modern frameworks.",
-              },
-              {
-                title: "AI Integration",
-                desc: "Add intelligent features to your existing products using LLMs and ML.",
-              },
-              {
-                title: "Technical Consulting",
-                desc: "Architecture reviews, tech stack decisions, and team guidance.",
-              },
-              {
-                title: "MVP Development",
-                desc: "Rapid prototyping to validate your idea and get to market fast.",
-              },
-              {
-                title: "Real-Time Systems",
-                desc: "GPS tracking, live updates, WebSockets - systems that need to be instant.",
-              },
-              {
-                title: "Code Review & Audit",
-                desc: "In-depth analysis of your codebase with actionable improvements.",
-              },
-            ].map((service, i) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="edge-card p-6 group"
-              >
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-foreground/40 text-sm leading-relaxed">
-                  {service.desc}
-                </p>
-              </motion.div>
+            {services.map((service, i) => (
+              <FadeInOnScroll key={service.title} delay={i * 0.1}>
+                <div className="edge-card p-6 group">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-foreground/40 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+              </FadeInOnScroll>
             ))}
           </div>
         </div>

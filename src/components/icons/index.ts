@@ -1,0 +1,2 @@
+export { StravaIcon } from "./StravaIcon";
+
