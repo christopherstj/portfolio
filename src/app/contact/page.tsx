@@ -139,7 +139,6 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -182,7 +181,6 @@ export default function ContactPage() {
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 group"

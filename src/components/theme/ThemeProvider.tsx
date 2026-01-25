@@ -31,6 +31,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       setResolvedTheme(newTheme);
       root.classList.remove("light", "dark");
       root.classList.add(newTheme);
+      
+      // Update favicon based on theme
+      const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement;
+      if (favicon) {
+        favicon.href = newTheme === "dark" ? "/favicon-dark.svg" : "/favicon-light.svg";
+      }
     };
 
     if (theme === "system") {

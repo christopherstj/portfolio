@@ -41,7 +41,6 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Header */}
@@ -136,7 +135,6 @@ export default function ProjectsPage() {
                         key={feature}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
                         className="flex items-center gap-3 text-foreground/60 text-sm"
@@ -172,7 +170,6 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -190,7 +187,6 @@ export default function ProjectsPage() {
                 key={project.name}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
@@ -274,7 +270,6 @@ export default function ProjectsPage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >

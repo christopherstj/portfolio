@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chris St Jean | AI-Empowered Software Engineer",
+  title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
   description:
     "Portfolio of Chris St Jean - AI-empowered software engineer, elite ultrarunner, and builder. Based in Santa Barbara, CA.",
   keywords: [
@@ -42,19 +42,27 @@ export const metadata: Metadata = {
     "Santa Barbara",
   ],
   authors: [{ name: "Chris St Jean" }],
+  icons: {
+    icon: [
+      { url: "/favicon-dark.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon-dark.svg",
+  },
   openGraph: {
-    title: "Chris St Jean | AI-Empowered Software Engineer",
+    title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
     description:
       "AI-empowered software engineer, elite ultrarunner, and builder.",
     type: "website",
     locale: "en_US",
+    url: "https://csj.dev",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris St Jean | AI-Empowered Software Engineer",
+    title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
     description:
       "AI-empowered software engineer, elite ultrarunner, and builder.",
   },
+  metadataBase: new URL("https://csj.dev"),
 };
 
 export default function RootLayout({
@@ -69,19 +77,26 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Prevent flash of wrong theme */}
+        {/* Prevent flash of wrong theme and set correct favicon */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 const theme = localStorage.getItem('theme');
+                let resolvedTheme;
                 if (theme === 'light') {
-                  document.documentElement.classList.add('light');
+                  resolvedTheme = 'light';
                 } else if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
+                  resolvedTheme = 'dark';
                 } else {
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  document.documentElement.classList.add(prefersDark ? 'dark' : 'light');
+                  resolvedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.classList.add(resolvedTheme);
+                
+                // Set favicon based on theme
+                const favicon = document.querySelector('link[rel="icon"]');
+                if (favicon) {
+                  favicon.href = resolvedTheme === 'dark' ? '/favicon-dark.svg' : '/favicon-light.svg';
                 }
               })();
             `,
