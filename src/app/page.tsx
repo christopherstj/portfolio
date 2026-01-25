@@ -139,6 +139,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="mb-16"
@@ -155,6 +156,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
@@ -221,6 +223,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="grid lg:grid-cols-2 gap-16"
@@ -251,6 +254,7 @@ export default function HomePage() {
                   key={service.title}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   className="edge-card p-6 group"
@@ -272,6 +276,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
@@ -299,6 +304,7 @@ export default function HomePage() {
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                     className="edge-card p-6 text-center"
@@ -349,6 +355,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >

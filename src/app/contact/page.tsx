@@ -35,7 +35,7 @@ export default function ContactPage() {
       <StrikingBackground />
       
       {/* Hero */}
-      <section className="min-h-[70vh] flex items-center relative px-6 pt-32">
+      <section className="min-h-[50vh] sm:min-h-[60vh] flex items-center relative px-6 pt-20 sm:pt-32">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left - Header + Form */}
@@ -139,6 +139,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -181,6 +182,7 @@ export default function ContactPage() {
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 group"

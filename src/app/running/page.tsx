@@ -24,7 +24,7 @@ export default function RunningPage() {
       <StrikingBackground />
       
       {/* Hero */}
-      <section className="min-h-[70vh] flex items-end relative px-6 pt-32 pb-16">
+      <section className="min-h-[50vh] sm:min-h-[60vh] flex items-end relative px-6 pt-20 sm:pt-32 pb-8 sm:pb-16">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -55,6 +55,7 @@ export default function RunningPage() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 sm:p-8 text-center"
@@ -78,6 +79,7 @@ export default function RunningPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -95,6 +97,7 @@ export default function RunningPage() {
                 key={route.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card overflow-hidden group"
@@ -133,6 +136,7 @@ export default function RunningPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -150,6 +154,7 @@ export default function RunningPage() {
                 key={race.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
               >
@@ -215,6 +220,7 @@ export default function RunningPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -229,6 +235,7 @@ export default function RunningPage() {
                 key={race.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.02 }}
                 className="edge-card p-3 group"
@@ -258,6 +265,7 @@ export default function RunningPage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >

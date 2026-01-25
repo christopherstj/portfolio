@@ -17,7 +17,7 @@ export default function AboutPage() {
       <StrikingBackground />
       
       {/* Hero */}
-      <section className="min-h-[60vh] flex items-end relative px-6 pt-32 pb-16">
+      <section className="min-h-[50vh] sm:min-h-[60vh] flex items-end relative px-6 pt-20 sm:pt-32 pb-8 sm:pb-16">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -50,6 +50,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
@@ -67,6 +68,7 @@ export default function AboutPage() {
                 key={category.name}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="edge-card p-6 group"
@@ -97,6 +99,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="edge-card p-8 sm:p-12"
           >
@@ -119,6 +122,7 @@ export default function AboutPage() {
                     key={tool.name}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
                     className="edge-card p-4 text-center"
@@ -143,6 +147,7 @@ export default function AboutPage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
