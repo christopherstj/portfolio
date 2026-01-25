@@ -52,7 +52,7 @@ export function HomeHero({ site }: HomeHeroProps) {
               <div className="absolute inset-0 bg-accent/20 -rotate-3" />
               <Image
                 src="/images/post-coco.jpg"
-                alt="Chris St. Jean"
+                alt="Chris St Jean, freelance full-stack developer and ultrarunner"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 priority
@@ -68,8 +68,8 @@ export function HomeHero({ site }: HomeHeroProps) {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-foreground/40 max-w-xl mb-12 leading-relaxed"
         >
-          AI-empowered engineer. Elite ultrarunner. 
-          Building next-gen outdoor tech from Santa Barbara.
+          Freelance full-stack developer shipping at AI speed. 
+          Building fitness and outdoor tech that I actually use.
         </motion.p>
 
         {/* CTA Buttons */}

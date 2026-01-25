@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getJourney, getSkills } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
@@ -5,6 +6,15 @@ import { Button } from "@/components/ui/button";
 import { JourneyTimeline } from "@/components/JourneyTimeline";
 import { FadeInOnScroll } from "@/components/animations";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Chris St Jean | Developer & Ultrarunner",
+  description:
+    "Full-stack developer and elite ultrarunner building the next generation of outdoor tech. 6+ years shipping software, 30,000+ miles run. Based in Santa Barbara, CA.",
+  alternates: {
+    canonical: "https://csj.dev/about",
+  },
+};
 
 export default function AboutPage() {
   const journey = getJourney();

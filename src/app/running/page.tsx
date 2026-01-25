@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getRunning } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
@@ -6,6 +7,15 @@ import { RaceMap } from "@/components/maps";
 import { StravaIcon } from "@/components/icons";
 import { StatsCard, RaceCard } from "@/components/running";
 import { FadeInOnScroll } from "@/components/animations";
+
+export const metadata: Metadata = {
+  title: "Ultrarunning | 250-Mile Races & Why I Build Outdoor Tech",
+  description:
+    "Elite ultrarunner with 22 races including Cocodona 250. This is why I build fitness and outdoor apps - I use them every day.",
+  alternates: {
+    canonical: "https://csj.dev/running",
+  },
+};
 
 export default function RunningPage() {
   const running = getRunning();

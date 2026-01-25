@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { getSiteConfig, getProjects, getRunning } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { HomeHero, FeaturedWork, WhatIDo, RunningHighlights, CTASection } from "@/components/sections";
+
+export const metadata: Metadata = {
+  title: "Freelance Full-Stack Developer | AI & Outdoor Tech",
+  description:
+    "Freelance developer shipping full-stack web and mobile apps at startup speed. Specializing in AI-powered development, fitness apps, and outdoor tech. React, Next.js, React Native.",
+  alternates: {
+    canonical: "https://csj.dev",
+  },
+};
 
 export default function HomePage() {
   const site = getSiteConfig();

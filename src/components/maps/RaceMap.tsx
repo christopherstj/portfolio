@@ -239,7 +239,7 @@ export function RaceMap({ routeUrl, name, className = "" }: RaceMapProps) {
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`} role="img" aria-label={`Interactive map showing the ${name} route`}>
       {loading && (
         <div className="absolute inset-0 bg-secondary flex items-center justify-center z-10">
           <div className="text-center">

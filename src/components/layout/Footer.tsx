@@ -42,7 +42,7 @@ export function Footer() {
               Chris St Jean<span className="text-accent">.</span>
             </div>
             <p className="text-foreground/40 text-sm leading-relaxed max-w-md">
-              AI-empowered software engineer building the future of outdoor tech. 
+              Freelance full-stack developer building fitness apps and outdoor tech with AI-powered development. 
               Elite ultrarunner. Based in Santa Barbara, CA.
             </p>
           </div>

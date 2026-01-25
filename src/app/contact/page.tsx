@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
 import { MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
 import { StrikingBackground } from "@/components/effects";
 import { ContactForm } from "@/components/ContactForm";
 import { StravaIcon } from "@/components/icons";
 import { FadeInOnScroll, FadeIn } from "@/components/animations";
+
+export const metadata: Metadata = {
+  title: "Hire a Freelance Developer | AI, Fitness Apps, Outdoor Tech",
+  description:
+    "Looking for a developer who actually uses fitness and outdoor apps? Let's build something together. Full-stack development, Strava integrations, GPS tracking, AI features.",
+  alternates: {
+    canonical: "https://csj.dev/contact",
+  },
+};
 
 const socialLinks = [
   { key: "github", icon: Github, label: "GitHub" },

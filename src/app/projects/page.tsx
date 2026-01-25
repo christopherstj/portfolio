@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getProjects } from "@/lib/content";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,15 @@ import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
 import { PathQuestIframe, ProjectCard } from "@/components/projects";
 import { FadeInOnScroll } from "@/components/animations";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Fitness Apps, Outdoor Tech & AI Projects",
+  description:
+    "Full-stack projects: PathQuest (peak bagging app with Strava integration), AI-powered data tools, and high-performance web apps. See what I can build for you.",
+  alternates: {
+    canonical: "https://csj.dev/projects",
+  },
+};
 
 export default function ProjectsPage() {
   const projects = getProjects();

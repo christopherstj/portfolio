@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme";
+import { StructuredData } from "@/components/seo";
 
 // Font configurations - Bold, modern, striking
 const spaceGrotesk = Space_Grotesk({
@@ -28,18 +29,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
+  title: {
+    default: "Chris St Jean | AI-Powered Full-Stack Developer",
+    template: "%s | Chris St Jean",
+  },
   description:
-    "Portfolio of Chris St Jean - AI-empowered software engineer, elite ultrarunner, and builder. Based in Santa Barbara, CA.",
+    "Freelance full-stack developer specializing in AI-powered development and outdoor tech. Built a complete web + mobile app in 6 weeks. React, Next.js, React Native, TypeScript. Available for projects.",
   keywords: [
-    "software engineer",
-    "freelance developer",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "AI",
-    "ultrarunning",
-    "Santa Barbara",
+    "freelance full-stack developer",
+    "AI developer for hire",
+    "fitness app developer",
+    "outdoor app developer",
+    "strava api developer",
+    "react native developer",
+    "next.js developer",
+    "GPS tracking app developer",
+    "geospatial developer",
+    "santa barbara software engineer",
   ],
   authors: [{ name: "Chris St Jean" }],
   icons: {
@@ -49,20 +55,33 @@ export const metadata: Metadata = {
     apple: "/favicon-dark.svg",
   },
   openGraph: {
-    title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
+    title: "Chris St Jean | AI-Powered Full-Stack Developer",
     description:
-      "AI-empowered software engineer, elite ultrarunner, and builder.",
+      "Freelance full-stack developer specializing in AI-powered development, fitness apps, and outdoor tech. React, Next.js, React Native.",
     type: "website",
     locale: "en_US",
     url: "https://csj.dev",
+    siteName: "Chris St Jean",
+    images: [
+      {
+        url: "/images/post-coco.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Chris St Jean, freelance full-stack developer and ultrarunner",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CSJ.dev | Chris St Jean - AI-Empowered Software Engineer",
+    title: "Chris St Jean | AI-Powered Full-Stack Developer",
     description:
-      "AI-empowered software engineer, elite ultrarunner, and builder.",
+      "Freelance full-stack developer specializing in AI-powered development, fitness apps, and outdoor tech.",
+    images: ["/images/post-coco.jpg"],
   },
   metadataBase: new URL("https://csj.dev"),
+  alternates: {
+    canonical: "https://csj.dev",
+  },
 };
 
 export default function RootLayout({
@@ -77,6 +96,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Structured Data for SEO */}
+        <StructuredData />
         {/* Prevent flash of wrong theme and set correct favicon */}
         <script
           dangerouslySetInnerHTML={{
