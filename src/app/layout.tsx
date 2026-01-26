@@ -5,6 +5,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme";
 import { StructuredData } from "@/components/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 // Font configurations - Bold, modern, striking
 const spaceGrotesk = Space_Grotesk({
@@ -131,6 +132,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
