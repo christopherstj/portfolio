@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getSiteConfig, getProjects, getRunning } from "@/lib/content";
-import { StrikingBackground } from "@/components/effects";
 import { HomeHero, FeaturedWork, WhatIDo, RunningHighlights, CTASection } from "@/components/sections";
 
 export const metadata: Metadata = {
@@ -19,8 +18,6 @@ export default function HomePage() {
 
   return (
     <>
-      <StrikingBackground />
-      
       <HomeHero site={site} />
       
       <FeaturedWork project={projects.featured} />

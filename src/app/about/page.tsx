@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getJourney, getSkills } from "@/lib/content";
-import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { JourneyTimeline } from "@/components/JourneyTimeline";
@@ -22,8 +21,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <StrikingBackground />
-      
       <PageHero
         label="About"
         title={<>The<br /><span className="text-accent">journey</span><span className="text-foreground/20">.</span></>}

@@ -5,6 +5,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme";
 import { StructuredData } from "@/components/seo";
+import { StrikingBackground } from "@/components/effects";
 import { Analytics } from "@vercel/analytics/next";
 
 // Font configurations - Bold, modern, striking
@@ -127,6 +128,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen">
         <ThemeProvider>
+          <StrikingBackground />
           <div className="noise-overlay" />
           <Navigation />
           <main>{children}</main>

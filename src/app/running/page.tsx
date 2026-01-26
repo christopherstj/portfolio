@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getRunning } from "@/lib/content";
-import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { RaceMap } from "@/components/maps";
@@ -22,8 +21,6 @@ export default function RunningPage() {
 
   return (
     <>
-      <StrikingBackground />
-      
       <PageHero
         label="Ultra Running"
         title={<>

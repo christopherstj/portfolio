@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
-import { StrikingBackground } from "@/components/effects";
 import { ContactForm } from "@/components/ContactForm";
 import { StravaIcon } from "@/components/icons";
 import { FadeInOnScroll, FadeIn } from "@/components/animations";
@@ -59,8 +58,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <StrikingBackground />
-      
       {/* Hero */}
       <section className="min-h-[50vh] sm:min-h-[60vh] flex items-center relative px-6 pt-20 sm:pt-32">
         <div className="max-w-7xl mx-auto w-full">

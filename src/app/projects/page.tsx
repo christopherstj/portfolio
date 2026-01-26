@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getProjects } from "@/lib/content";
 import { Button } from "@/components/ui/button";
-import { StrikingBackground } from "@/components/effects";
 import { PageHero } from "@/components/layout";
 import { PathQuestIframe, ProjectCard } from "@/components/projects";
 import { FadeInOnScroll } from "@/components/animations";
@@ -21,8 +20,6 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <StrikingBackground />
-      
       <PageHero
         label="Projects"
         title={<>Things I&apos;ve<br /><span className="text-accent">built</span><span className="text-foreground/20">.</span></>}
