@@ -87,16 +87,6 @@ export default function ContactPage() {
 
             {/* Right - Contact info */}
             <FadeIn delay={0.2} className="space-y-8 lg:sticky lg:top-32">
-              {/* Email - now just display, form handles sending */}
-              <div className="edge-card p-6">
-                <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">
-                  Email
-                </div>
-                <div className="font-[family-name:var(--font-display)] text-xl sm:text-2xl font-bold text-foreground">
-                  {site.email}
-                </div>
-              </div>
-
               {/* Location */}
               <div className="edge-card p-6">
                 <div className="text-xs font-mono text-foreground/30 uppercase tracking-widest mb-3">

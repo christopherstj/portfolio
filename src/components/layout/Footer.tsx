@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { getSiteConfig } from "@/lib/content";
 
 // Strava icon
@@ -90,13 +90,6 @@ export function Footer() {
                 );
               })}
             </div>
-            <a
-              href={`mailto:${site.email}`}
-              className="flex items-center gap-2 text-foreground/40 hover:text-accent transition-colors text-sm"
-            >
-              <Mail className="w-4 h-4" />
-              {site.email}
-            </a>
           </div>
         </div>
       </div>
