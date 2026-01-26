@@ -23,13 +23,12 @@ function generateContourPath(
   return path;
 }
 
-// Mountain peak generator - extended width for parallax panning
+// Mountain peak generator - simple triangular peaks
 function generateMountainPath(
   width: number,
   baseY: number,
   peaks: { x: number; height: number; width: number }[]
 ): string {
-  // Extend far beyond viewport to account for parallax movement
   const leftEdge = -width;
   const rightEdge = width * 2;
   let path = `M ${leftEdge} ${baseY}`;
@@ -83,75 +82,60 @@ export function StrikingBackground() {
   const accentColor = isDark ? "#ff4d00" : "#2d8a4e";
   const bgColor = isDark ? "#000000" : "#f5f0e8";
 
-  // Generate mountain layers with overlapping peaks - extended far left and right for parallax
-  // The parallax moves up to 300px right, so we need peaks starting at least -300px off screen
+  // Generate mountain layers with varied peak sizes
   const mountainLayers = [
     {
+      // Back layer - tall peaks with big variation
       peaks: [
-        // Extended left side (for when parallax shifts right)
-        { x: -width * 0.5, height: 180, width: 320 },
-        { x: -width * 0.38, height: 240, width: 360 },
-        { x: -width * 0.26, height: 200, width: 340 },
-        { x: -width * 0.14, height: 280, width: 380 },
-        // Original peaks
-        { x: width * 0.0, height: 220, width: 340 },
-        { x: width * 0.12, height: 300, width: 400 },
-        { x: width * 0.24, height: 240, width: 360 },
-        { x: width * 0.36, height: 340, width: 440 },
-        { x: width * 0.48, height: 260, width: 380 },
-        { x: width * 0.60, height: 310, width: 420 },
-        { x: width * 0.72, height: 280, width: 400 },
-        { x: width * 0.84, height: 250, width: 360 },
-        { x: width * 0.96, height: 290, width: 400 },
-        { x: width * 1.08, height: 230, width: 340 },
-        { x: width * 1.20, height: 270, width: 380 },
+        { x: -width * 0.5, height: 140, width: 280 },
+        { x: -width * 0.35, height: 320, width: 480 },
+        { x: -width * 0.18, height: 180, width: 320 },
+        { x: width * 0.0, height: 260, width: 400 },
+        { x: width * 0.12, height: 380, width: 520 },
+        { x: width * 0.28, height: 200, width: 340 },
+        { x: width * 0.42, height: 340, width: 460 },
+        { x: width * 0.55, height: 160, width: 300 },
+        { x: width * 0.68, height: 300, width: 440 },
+        { x: width * 0.82, height: 220, width: 360 },
+        { x: width * 0.96, height: 360, width: 500 },
+        { x: width * 1.12, height: 180, width: 320 },
+        { x: width * 1.28, height: 280, width: 420 },
       ],
       baseY: height * 0.82,
       opacity: isDark ? 0.18 : 0.12,
       parallax: layer1X,
     },
     {
+      // Middle layer - medium peaks, different rhythm
       peaks: [
-        // Extended left side
-        { x: -width * 0.45, height: 130, width: 300 },
-        { x: -width * 0.32, height: 180, width: 340 },
-        { x: -width * 0.20, height: 150, width: 320 },
-        { x: -width * 0.08, height: 200, width: 360 },
-        // Original peaks
-        { x: width * 0.04, height: 160, width: 320 },
-        { x: width * 0.16, height: 220, width: 360 },
-        { x: width * 0.28, height: 180, width: 340 },
-        { x: width * 0.40, height: 260, width: 400 },
-        { x: width * 0.52, height: 200, width: 360 },
-        { x: width * 0.64, height: 240, width: 380 },
-        { x: width * 0.76, height: 210, width: 360 },
-        { x: width * 0.88, height: 250, width: 380 },
-        { x: width * 1.0, height: 190, width: 340 },
-        { x: width * 1.12, height: 230, width: 360 },
-        { x: width * 1.24, height: 200, width: 340 },
+        { x: -width * 0.45, height: 100, width: 260 },
+        { x: -width * 0.30, height: 220, width: 400 },
+        { x: -width * 0.12, height: 140, width: 300 },
+        { x: width * 0.05, height: 180, width: 360 },
+        { x: width * 0.20, height: 260, width: 440 },
+        { x: width * 0.38, height: 120, width: 280 },
+        { x: width * 0.52, height: 200, width: 380 },
+        { x: width * 0.68, height: 280, width: 460 },
+        { x: width * 0.85, height: 150, width: 320 },
+        { x: width * 1.0, height: 240, width: 420 },
+        { x: width * 1.18, height: 170, width: 340 },
       ],
       baseY: height * 0.88,
       opacity: isDark ? 0.1 : 0.08,
       parallax: layer2X,
     },
     {
+      // Front layer - smaller foothills, wider spacing
       peaks: [
-        // Extended left side
-        { x: -width * 0.40, height: 90, width: 260 },
-        { x: -width * 0.28, height: 130, width: 300 },
-        { x: -width * 0.16, height: 100, width: 280 },
-        { x: -width * 0.04, height: 150, width: 320 },
-        // Original peaks
-        { x: width * 0.08, height: 120, width: 300 },
-        { x: width * 0.20, height: 170, width: 340 },
-        { x: width * 0.32, height: 140, width: 320 },
-        { x: width * 0.44, height: 190, width: 360 },
-        { x: width * 0.56, height: 150, width: 320 },
-        { x: width * 0.68, height: 180, width: 340 },
-        { x: width * 0.80, height: 160, width: 320 },
-        { x: width * 0.92, height: 140, width: 300 },
-        { x: width * 1.04, height: 170, width: 340 },
-        { x: width * 1.16, height: 150, width: 320 },
+        { x: -width * 0.40, height: 60, width: 240 },
+        { x: -width * 0.20, height: 120, width: 340 },
+        { x: width * 0.02, height: 80, width: 280 },
+        { x: width * 0.22, height: 150, width: 380 },
+        { x: width * 0.45, height: 90, width: 300 },
+        { x: width * 0.65, height: 130, width: 360 },
+        { x: width * 0.88, height: 70, width: 260 },
+        { x: width * 1.08, height: 110, width: 320 },
+        { x: width * 1.28, height: 100, width: 300 },
       ],
       baseY: height * 0.94,
       opacity: isDark ? 0.05 : 0.04,
