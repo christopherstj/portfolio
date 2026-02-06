@@ -19,7 +19,7 @@ export default function HomePage() {
     <>
       <HomeHero site={site} />
       
-      <FeaturedWork project={projects.featured} />
+      <FeaturedWork projects={projects.featured} />
       
       <WhatIDo />
       

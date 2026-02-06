@@ -11,6 +11,8 @@ interface FeaturedProjectProps {
 }
 
 export function FeaturedProject({ project }: FeaturedProjectProps) {
+  const isIframe = project.displayType === "iframe" && project.url;
+
   return (
     <section className="relative py-16 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto">
@@ -49,21 +51,41 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
           {/* Featured project card */}
           <div className="edge-card overflow-hidden">
             <div className="relative">
-              {/* Logo/Image area */}
-              <div className="relative h-[300px] sm:h-[400px] bg-foreground/[0.02] flex items-center justify-center">
-                {project.image ? (
-                  <Image
-                    src={project.image}
-                    alt={`${project.name} logo`}
-                    width={400}
-                    height={200}
-                    className="object-contain max-h-[200px] w-auto"
-                    priority
-                  />
-                ) : (
-                  <div className="text-6xl text-foreground/20">🏢</div>
-                )}
-              </div>
+              {/* Visual area - Logo or iframe based on displayType */}
+              {isIframe ? (
+                <div className="relative h-[500px] sm:h-[650px] bg-foreground/[0.02] flex items-center justify-center">
+                  <div className="relative w-[280px] h-[560px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-foreground/10">
+                    {/* Phone notch */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-b-2xl z-10" />
+                    {/* Screen */}
+                    <div className="w-full h-full rounded-[2.25rem] overflow-hidden bg-secondary">
+                      <iframe
+                        src={project.url!}
+                        className="w-[375px] h-[812px] origin-top-left scale-[0.688]"
+                        title={`${project.name} App Preview`}
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs font-mono text-foreground/40">
+                    {project.url!.replace("https://", "")}
+                  </div>
+                </div>
+              ) : (
+                <div className="relative h-[300px] sm:h-[400px] bg-foreground/[0.02] flex items-center justify-center">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.name} logo`}
+                      width={400}
+                      height={200}
+                      className="object-contain max-h-[200px] w-auto"
+                      priority
+                    />
+                  ) : (
+                    <div className="text-6xl text-foreground/20">🏢</div>
+                  )}
+                </div>
+              )}
 
               {/* Info bar */}
               <div className="p-6 border-t border-border">

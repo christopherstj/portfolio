@@ -24,8 +24,10 @@ export default function ProjectsPage() {
         title={<>Things I&apos;ve<br /><span className="text-accent">built</span><span className="text-foreground/20">.</span></>}
       />
 
-      {/* Featured Project - Standard Communities */}
-      <FeaturedProject project={projects.featured} />
+      {/* Featured Projects */}
+      {projects.featured.map((project) => (
+        <FeaturedProject key={project.id} project={project} />
+      ))}
 
       {/* Other Projects / Work Experience */}
       <section className="relative py-16 px-6 border-t border-border">

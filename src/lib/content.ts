@@ -16,7 +16,7 @@ export type SkillsConfig = typeof skillsConfig;
 
 // Individual type exports for convenience
 export type Project = ProjectsConfig["other"][number];
-export type FeaturedProject = ProjectsConfig["featured"];
+export type FeaturedProject = ProjectsConfig["featured"][number];
 export type Race = RunningConfig["races"][number];
 export type JourneyEntry = JourneyConfig["timeline"][number];
 export type SkillCategory = SkillsConfig["categories"][number];
@@ -32,7 +32,7 @@ export function getProjects(): ProjectsConfig {
   return projectsConfig;
 }
 
-export function getFeaturedProject(): FeaturedProject {
+export function getFeaturedProjects(): FeaturedProject[] {
   return projectsConfig.featured;
 }
 

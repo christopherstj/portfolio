@@ -1,42 +1,48 @@
 {
-  "featured": {
-    "id": "standard-communities",
-    "name": "Standard Communities",
-    "url": null,
-    "github": null,
-    "tagline": "AI-powered data intelligence for affordable housing.",
-    "description": "Built AI agents and MCP servers that unify data from HUD and disparate sources, enhance it with LLMs and high-quality geocoding, confidence-score across subjective data, and power multi-million dollar deal-making decisions in the affordable housing space.",
-    "image": "/images/standard-logo.png",
-    "stack": ["Python", "Next.js", "Supabase", "Claude API", "MCP Servers", "Vercel", "Render", "Modal"],
-    "features": [
-      "Custom AI agents and MCP servers for data unification",
-      "Multi-source data ingestion (HUD, public records, proprietary)",
-      "LLM-powered data enhancement and entity resolution",
-      "Confidence-scored joining across subjective datasets",
-      "Real-time decision support for multi-million dollar deals",
-      "Rapid iteration with direct end-user feedback loops"
-    ],
-    "status": "Active",
-    "role": "AI Engineer",
-    "period": "December 2025 - Present"
-  },
-  "other": [
+  "featured": [
+    {
+      "id": "standard-communities",
+      "name": "Standard Communities",
+      "url": null,
+      "github": null,
+      "tagline": "AI-powered data intelligence for affordable housing.",
+      "description": "Built AI agents and MCP servers that unify data from HUD and disparate sources, enhance it with LLMs and high-quality geocoding, confidence-score across subjective data, and power multi-million dollar deal-making decisions in the affordable housing space.",
+      "image": "/images/standard-logo.png",
+      "stack": ["Python", "Next.js", "Supabase", "Claude API", "MCP Servers", "Vercel", "Render", "Modal"],
+      "features": [
+        "Custom AI agents and MCP servers for data unification",
+        "Multi-source data ingestion (HUD, public records, proprietary)",
+        "LLM-powered data enhancement and entity resolution",
+        "Confidence-scored joining across subjective datasets",
+        "Real-time decision support for multi-million dollar deals",
+        "Rapid iteration with direct end-user feedback loops"
+      ],
+      "status": "Active",
+      "role": "AI Engineer",
+      "period": "December 2025 - Present",
+      "displayType": "logo"
+    },
     {
       "id": "pathquest",
       "name": "PathQuest",
       "url": "https://pathquest.app",
       "github": null,
+      "tagline": "Track your summits. Discover new peaks. Conquer challenges.",
       "description": "A full-stack web and mobile platform for mountain peak baggers, built in ~6 weeks using AI-powered development. Integrates with Strava, features interactive Mapbox visualizations, and transforms athlete activity data into insights.",
       "image": "/images/projects/pathquest-hero.png",
       "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "Google Cloud"],
-      "role": "Founding Developer",
-      "period": "October 2024 - Present",
-      "highlights": [
+      "features": [
         "Full-stack web + mobile in 6 weeks",
         "Geospatial ML pipelines (Strava + OSM + LiDAR)",
         "Scalable Google Cloud architecture"
-      ]
-    },
+      ],
+      "status": "In Development",
+      "role": "Founding Developer",
+      "period": "October 2024 - Present",
+      "displayType": "iframe"
+    }
+  ],
+  "other": [
     {
       "id": "ai-endurance",
       "name": "AI Endurance",
