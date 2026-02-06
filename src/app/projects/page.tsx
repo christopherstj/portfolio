@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getProjects } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/layout";
-import { PathQuestIframe, ProjectCard } from "@/components/projects";
+import { FeaturedProject, ProjectCard } from "@/components/projects";
 import { FadeInOnScroll } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Fitness Apps, Outdoor Tech & AI Projects",
+  title: "Portfolio | AI Agents, Data Pipelines & Enterprise Systems",
   description:
-    "Full-stack projects: PathQuest (peak bagging app with Strava integration), AI-powered data tools, and high-performance web apps. See what I can build for you.",
+    "AI-powered projects: Custom agents and MCP servers for multi-million dollar decisions, enterprise data pipelines, and high-performance web apps. See what I can build for you.",
   alternates: {
     canonical: "https://csj.dev/projects",
   },
@@ -25,8 +24,8 @@ export default function ProjectsPage() {
         title={<>Things I&apos;ve<br /><span className="text-accent">built</span><span className="text-foreground/20">.</span></>}
       />
 
-      {/* Featured Project - PathQuest with iframe */}
-      <PathQuestIframe project={projects.featured} />
+      {/* Featured Project - Standard Communities */}
+      <FeaturedProject project={projects.featured} />
 
       {/* Other Projects / Work Experience */}
       <section className="relative py-16 px-6 border-t border-border">

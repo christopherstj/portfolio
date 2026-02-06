@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { getSiteConfig, getProjects, getRunning } from "@/lib/content";
-import { HomeHero, FeaturedWork, WhatIDo, RunningHighlights, CTASection } from "@/components/sections";
+import { getSiteConfig, getProjects } from "@/lib/content";
+import { HomeHero, FeaturedWork, WhatIDo, CTASection } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "Freelance Full-Stack Developer | AI & Outdoor Tech",
+  title: "Enterprise AI Engineer | Chris St Jean",
   description:
-    "Freelance developer shipping full-stack web and mobile apps at startup speed. Specializing in AI-powered development, fitness apps, and outdoor tech. React, Next.js, React Native.",
+    "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers, intelligent data pipelines, and enterprise-grade systems—shipped at startup speed.",
   alternates: {
     canonical: "https://csj.dev",
   },
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const site = getSiteConfig();
   const projects = getProjects();
-  const running = getRunning();
 
   return (
     <>
@@ -24,11 +23,9 @@ export default function HomePage() {
       
       <WhatIDo />
       
-      <RunningHighlights running={running} />
-      
       <CTASection
         title={<>Let&apos;s build something<br /><span className="text-accent">together</span><span className="text-foreground">.</span></>}
-        description="I'm currently available for freelance projects. Whether you need a full-stack application, AI integration, or technical guidance."
+        description="I'm currently available for projects. Whether you need AI agents, data pipelines, full-stack applications, or technical guidance."
         buttonText="Start a Conversation"
         buttonHref="/contact"
       />

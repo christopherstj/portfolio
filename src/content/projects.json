@@ -1,40 +1,40 @@
 {
   "featured": {
-    "id": "pathquest",
-    "name": "PathQuest",
-    "url": "https://pathquest.app",
+    "id": "standard-communities",
+    "name": "Standard Communities",
+    "url": null,
     "github": null,
-    "tagline": "Track your summits. Discover new peaks. Conquer challenges.",
-    "description": "A full-stack web and mobile platform for mountain peak baggers, built in ~6 weeks using AI-powered development. Integrates with Strava to automatically detect summit attempts, features powerfully interactive Mapbox visualizations, and transforms raw athlete activity data into actionable insights.",
-    "image": "/images/projects/pathquest-hero.png",
-    "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "Google Cloud"],
+    "tagline": "AI-powered data intelligence for affordable housing.",
+    "description": "Built AI agents and MCP servers that unify data from HUD and disparate sources, enhance it with LLMs and high-quality geocoding, confidence-score across subjective data, and power multi-million dollar deal-making decisions in the affordable housing space.",
+    "image": "/images/standard-logo.png",
+    "stack": ["Python", "Next.js", "Supabase", "Claude API", "MCP Servers", "Vercel", "Render", "Modal"],
     "features": [
-      "Full-stack web + cross-platform mobile app in 6 weeks",
-      "AI-powered development with Cursor for high-velocity shipping",
-      "Geospatial data pipelines (Strava + OpenStreetMap)",
-      "ML + LiDAR DEM scans for accurate peak coordinates",
-      "Scalable Google Cloud architecture (Cloud Run, serverless)",
-      "Direct user feedback loops with ultrarunning community"
+      "Custom AI agents and MCP servers for data unification",
+      "Multi-source data ingestion (HUD, public records, proprietary)",
+      "LLM-powered data enhancement and entity resolution",
+      "Confidence-scored joining across subjective datasets",
+      "Real-time decision support for multi-million dollar deals",
+      "Rapid iteration with direct end-user feedback loops"
     ],
-    "status": "In Development",
-    "role": "Founding Developer",
-    "period": "October 2024 - Present"
+    "status": "Active",
+    "role": "AI Engineer",
+    "period": "December 2025 - Present"
   },
   "other": [
     {
-      "id": "standard-communities",
-      "name": "Standard Communities",
-      "url": null,
+      "id": "pathquest",
+      "name": "PathQuest",
+      "url": "https://pathquest.app",
       "github": null,
-      "description": "Built a proprietary data tool for the affordable housing universe that drove multi-million dollar deal making decisions. Full ownership of the stack: Python data pipelines, LLM enhancements, confidence-scored joining, and unified frontend.",
-      "image": null,
-      "stack": ["Python", "Next.js", "Supabase", "Vercel", "Render", "Modal", "Flash LLMs"],
-      "role": "Lead Developer",
-      "period": "December 2025 - Present",
+      "description": "A full-stack web and mobile platform for mountain peak baggers, built in ~6 weeks using AI-powered development. Integrates with Strava, features interactive Mapbox visualizations, and transforms athlete activity data into insights.",
+      "image": "/images/projects/pathquest-hero.png",
+      "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "Google Cloud"],
+      "role": "Founding Developer",
+      "period": "October 2024 - Present",
       "highlights": [
-        "Multi-million dollar deal making impact",
-        "Python data pipelines with LLM enhancements",
-        "Rapid iteration with regular end-user feedback"
+        "Full-stack web + mobile in 6 weeks",
+        "Geospatial ML pipelines (Strava + OSM + LiDAR)",
+        "Scalable Google Cloud architecture"
       ]
     },
     {

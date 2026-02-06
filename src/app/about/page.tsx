@@ -7,9 +7,9 @@ import { FadeInOnScroll } from "@/components/animations";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Chris St Jean | Developer & Ultrarunner",
+  title: "About | AI Engineer Building Enterprise Workflows",
   description:
-    "Full-stack developer and elite ultrarunner building the next generation of outdoor tech. 6+ years shipping software, 30,000+ miles run. Based in Santa Barbara, CA.",
+    "Enterprise AI engineer with 6+ years building intelligent systems. From custom AI agents and MCP servers to data pipelines processing hundreds of gigabytes. Based in Santa Barbara, CA.",
   alternates: {
     canonical: "https://csj.dev/about",
   },

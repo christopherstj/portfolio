@@ -6,9 +6,9 @@ import { StravaIcon } from "@/components/icons";
 import { FadeInOnScroll, FadeIn } from "@/components/animations";
 
 export const metadata: Metadata = {
-  title: "Hire a Freelance Developer | AI, Fitness Apps, Outdoor Tech",
+  title: "Hire an AI Engineer | Custom Agents, MCP Servers, Data Pipelines",
   description:
-    "Looking for a developer who actually uses fitness and outdoor apps? Let's build something together. Full-stack development, Strava integrations, GPS tracking, AI features.",
+    "Looking for someone to build AI agents, MCP servers, or intelligent data pipelines? Let's talk. Enterprise-grade AI systems shipped at startup speed.",
   alternates: {
     canonical: "https://csj.dev/contact",
   },
@@ -23,24 +23,24 @@ const socialLinks = [
 
 const services = [
   {
-    title: "Full-Stack Development",
-    desc: "End-to-end web and mobile applications built with modern frameworks.",
+    title: "AI Agents & Workflows",
+    desc: "Custom agents, MCP servers, and workflow orchestration that drives real decisions.",
   },
   {
-    title: "AI Integration",
-    desc: "Add intelligent features to your existing products using LLMs and ML.",
+    title: "Data Systems",
+    desc: "ETL pipelines, multi-source data unification, LLM-powered enhancement.",
+  },
+  {
+    title: "Full-Stack Development",
+    desc: "End-to-end web and mobile applications. React, Next.js, Node.js, Python.",
   },
   {
     title: "Technical Consulting",
-    desc: "Architecture reviews, tech stack decisions, and team guidance.",
+    desc: "Architecture reviews, AI strategy, tech stack decisions, and team guidance.",
   },
   {
     title: "MVP Development",
     desc: "Rapid prototyping to validate your idea and get to market fast.",
-  },
-  {
-    title: "Real-Time Systems",
-    desc: "GPS tracking, live updates, WebSockets - systems that need to be instant.",
   },
   {
     title: "Code Review & Audit",

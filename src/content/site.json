@@ -1,6 +1,6 @@
 {
   "name": "Chris St Jean",
-  "tagline": "AI-Empowered Software Engineer. Ultrarunner. Peak Bagger.",
+  "tagline": "Enterprise AI Engineer. Problem Solver.",
   "location": {
     "name": "Santa Barbara, CA",
     "coordinates": { "lat": 34.4208, "lng": -119.6982 }
@@ -14,12 +14,12 @@
     "twitter": null
   },
   "hero": {
-    "headline": "I build software that moves.",
-    "subline": "AI-empowered engineer with 6+ years shipping high-quality software that delivers measurable impact. Elite ultrarunner building next-gen outdoor tech."
+    "headline": "I build AI that works.",
+    "subline": "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers, intelligent data pipelines, and enterprise-grade systems—shipped at startup speed."
   },
   "meta": {
-    "title": "Chris St Jean | AI-Empowered Software Engineer",
-    "description": "Portfolio of Chris St Jean - AI-empowered software engineer with 6+ years experience in TypeScript, React/Next.js, Node.js, and geospatial apps. Elite ultrarunner and peak bagger based in Santa Barbara, CA."
+    "title": "Chris St Jean | Enterprise AI Engineer",
+    "description": "Portfolio of Chris St Jean - Engineer building AI-powered workflows, custom agents, and MCP servers for enterprise decisions. 6+ years shipping TypeScript, React/Next.js, Node.js, Python. Based in Santa Barbara, CA."
   },
   "education": {
     "school": "Babson College",
@@ -29,8 +29,8 @@
   },
   "homeStats": [
     { "value": "6+", "label": "Years Shipping Code" },
-    { "value": "6 Weeks", "label": "Full App (Web + Mobile)" },
-    { "value": "2×", "label": "Signups & Conversions" },
-    { "value": "30,000+", "label": "Miles Run" }
+    { "value": "$M+", "label": "Decisions Powered by AI" },
+    { "value": "100s GB", "label": "Data Pipelines" },
+    { "value": "6 Weeks", "label": "Full App (Web + Mobile)" }
   ]
 }

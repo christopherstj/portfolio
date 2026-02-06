@@ -32,22 +32,24 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Chris St Jean | AI-Powered Full-Stack Developer",
+    default: "Chris St Jean | AI Agents, MCP Servers & Enterprise Workflows",
     template: "%s | Chris St Jean",
   },
   description:
-    "Freelance full-stack developer specializing in AI-powered development and outdoor tech. Built a complete web + mobile app in 6 weeks. React, Next.js, React Native, TypeScript. Available for projects.",
+    "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers, intelligent data pipelines, RAG systems, and enterprise-grade AI—shipped at startup speed.",
   keywords: [
-    "freelance full-stack developer",
-    "AI developer for hire",
-    "fitness app developer",
-    "outdoor app developer",
-    "strava api developer",
-    "react native developer",
-    "next.js developer",
-    "GPS tracking app developer",
-    "geospatial developer",
-    "santa barbara software engineer",
+    "AI agent developer",
+    "MCP server developer",
+    "custom AI agents",
+    "AI workflow automation",
+    "enterprise AI engineer",
+    "LLM integration developer",
+    "RAG pipeline developer",
+    "Claude API developer",
+    "AI data pipelines",
+    "intelligent workflow systems",
+    "full-stack AI developer",
+    "AI systems engineer",
   ],
   authors: [{ name: "Chris St Jean" }],
   icons: {
@@ -57,9 +59,9 @@ export const metadata: Metadata = {
     apple: "/favicon-dark.svg",
   },
   openGraph: {
-    title: "Chris St Jean | AI-Powered Full-Stack Developer",
+    title: "Chris St Jean | AI Agents, MCP Servers & Enterprise Workflows",
     description:
-      "Freelance full-stack developer specializing in AI-powered development, fitness apps, and outdoor tech. React, Next.js, React Native.",
+      "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers, data pipelines, and enterprise AI systems.",
     type: "website",
     locale: "en_US",
     url: "https://csj.dev",
@@ -69,15 +71,15 @@ export const metadata: Metadata = {
         url: "/images/post-coco.jpg",
         width: 1200,
         height: 630,
-        alt: "Chris St Jean, freelance full-stack developer and ultrarunner",
+        alt: "Chris St Jean - Enterprise AI Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris St Jean | AI-Powered Full-Stack Developer",
+    title: "Chris St Jean | AI Agents, MCP Servers & Enterprise Workflows",
     description:
-      "Freelance full-stack developer specializing in AI-powered development, fitness apps, and outdoor tech.",
+      "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers and enterprise AI systems.",
     images: ["/images/post-coco.jpg"],
   },
   metadataBase: new URL("https://csj.dev"),

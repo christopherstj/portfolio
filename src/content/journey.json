@@ -1,70 +1,83 @@
 {
-  "intro": "Movement is at my core—whether it's miles on the trail, lines of code, or life itself. I keep moving forward.",
+  "intro": "I build AI systems that power real business decisions. Here's the path that got me here.",
   "timeline": [
     {
-      "id": "van-build",
-      "title": "Built a House on Wheels",
-      "period": "2020",
-      "description": "My pandemic project: converted a cargo van into a mobile home. Designed the layout, installed solar, built custom cabinetry. A year of hands-on work that became my ticket to freedom.",
+      "id": "33floors",
+      "title": "33Floors — Team Lead",
+      "period": "May 2020-Dec 2025",
+      "description": "Five years leading a small engineering team, shipping customer-facing enterprise software end-to-end. React, Next.js, TypeScript, .NET. Built ETL pipelines processing hundreds of gigabytes in under 30 minutes. Learned to work with ambiguity and translate business needs into real features.",
       "location": {
-        "name": "The Workshop",
+        "name": "Remote",
         "coordinates": null
       },
-      "image": "/images/journey/van.jpg",
-      "type": "adventure",
-      "highlights": ["Full electrical system", "Custom woodwork", "Off-grid capable"]
+      "image": "/images/journey/33floors.jpg",
+      "type": "work",
+      "highlights": ["Team Lead", "Enterprise Software", "ETL Pipelines", "5 Years"]
     },
     {
       "id": "vanlife",
       "title": "Full-Time Vanlife",
       "period": "2021-2023",
-      "description": "Two years on the road, working remotely and chasing trails across the West. Flagstaff, Santa Barbara, and Estes Park became my regular haunts. This is when ultrarunning took over my life.",
+      "description": "Two years on the road, working remotely across the West. Flagstaff, Santa Barbara, and Estes Park became my regular haunts.",
       "location": {
         "name": "The Open Road",
         "coordinates": null
       },
       "image": "/images/journey/vanlife.jpg",
       "type": "adventure",
-      "highlights": ["Flagstaff", "Santa Barbara", "Estes Park"]
+      "highlights": ["Remote Work", "Flagstaff", "Santa Barbara", "Estes Park"]
     },
     {
-      "id": "flagstaff",
-      "title": "Flagstaff, AZ",
-      "period": "2023-2024",
-      "description": "Moved out of the van and into the mountains at 7,000 feet. Flagstaff became my first real home base in years. High altitude training, endless trails, and a brief detour to Colorado Springs in early 2024 before returning to Flag.",
+      "id": "ai-endurance",
+      "title": "AI Endurance — Co-Founder",
+      "period": "Sep 2023-Nov 2024",
+      "description": "Co-founded and rebuilt an endurance training platform from the ground up. Modernized legacy systems with React/Next.js, shipped PWAs scoring 100/100 Lighthouse, and delivered a 2× increase in signups and conversions.",
       "location": {
-        "name": "Flagstaff, AZ",
-        "coordinates": { "lat": 35.198, "lng": -111.651 }
+        "name": "Remote",
+        "coordinates": null
       },
-      "image": "/images/journey/flagstaff.jpg",
-      "type": "location",
-      "highlights": ["7,000 ft elevation", "Coconino National Forest", "Ultra training base"]
+      "image": "/images/journey/ai-endurance.jpg",
+      "type": "work",
+      "highlights": ["Co-Founder", "2× Conversions", "100/100 Lighthouse", "Fitness Tech"]
     },
     {
       "id": "pathquest",
-      "title": "PathQuest Begins",
-      "period": "Late 2024",
-      "description": "Started conceptualizing and building PathQuest—a platform to track peak bagging adventures. What began as a personal project became a full-fledged app with web and mobile experiences.",
+      "title": "PathQuest — Founding Developer",
+      "period": "Oct 2024-Present",
+      "description": "Built a full-stack web and mobile app in 6 weeks—backend APIs, React/Next.js frontend, React Native mobile, with Mapbox visualizations. Geospatial pipelines transforming Strava + OSM data into insights.",
       "location": {
         "name": "Flagstaff, AZ",
         "coordinates": { "lat": 35.198, "lng": -111.651 }
       },
       "image": "/images/journey/pathquest.jpg",
       "type": "project",
-      "highlights": ["React Native", "Next.js", "Strava integration"]
+      "highlights": ["Full Stack in 6 Weeks", "React Native", "Geospatial Pipelines"]
     },
     {
       "id": "santa-barbara",
       "title": "Santa Barbara, CA",
       "period": "Feb 2025-Present",
-      "description": "Current home base. Ocean trails, mountain runs, and the perfect climate for year-round training. I've loved this place ever since I arrived. Building the next generation of outdoor tech.",
+      "description": "Current home base. Building enterprise AI systems while enjoying ocean trails and mountain runs.",
       "location": {
         "name": "Santa Barbara, CA",
         "coordinates": { "lat": 34.4208, "lng": -119.6982 }
       },
       "image": "/images/journey/santa-barbara.jpg",
       "type": "location",
-      "highlights": ["Ocean + mountains", "Year-round training", "PathQuest HQ"]
+      "highlights": ["Ocean + mountains", "Enterprise AI"]
+    },
+    {
+      "id": "standard-communities",
+      "title": "Standard Communities — AI Engineer",
+      "period": "Dec 2025-Present",
+      "description": "Building AI-powered workflows and data tools for affordable housing. Custom agents and MCP servers that unify data from HUD and other sources, enhance it with LLMs and geocoding, confidence-score across subjective data, and power multi-million dollar deal-making decisions.",
+      "location": {
+        "name": "Santa Barbara, CA",
+        "coordinates": { "lat": 34.4208, "lng": -119.6982 }
+      },
+      "image": "/images/journey/standard.jpg",
+      "type": "work",
+      "highlights": ["AI Agents", "MCP Servers", "Multi-Million $ Decisions", "Data Unification"]
     }
   ]
 }

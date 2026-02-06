@@ -68,8 +68,7 @@ export function HomeHero({ site }: HomeHeroProps) {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-foreground/40 max-w-xl mb-12 leading-relaxed"
         >
-          Freelance full-stack developer shipping at AI speed. 
-          Building fitness and outdoor tech that I actually use.
+          {site.hero.subline}
         </motion.p>
 
         {/* CTA Buttons */}

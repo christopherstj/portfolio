@@ -3,10 +3,10 @@
 import { FadeInOnScroll } from "@/components/animations";
 
 const services = [
-  { title: "Web Applications", desc: "React, Next.js, TypeScript. Fast, accessible, beautiful." },
-  { title: "Mobile Development", desc: "React Native, Expo. Cross-platform that feels native." },
-  { title: "AI Integration", desc: "OpenAI, Claude, LangChain. Intelligence built in." },
-  { title: "Real-time Systems", desc: "WebSockets, GPS tracking, live data. Instant updates." },
+  { title: "AI Agents & Workflows", desc: "Custom agents, MCP servers, workflow orchestration that drives decisions." },
+  { title: "Data Unification", desc: "ETL pipelines, multi-source ingestion, confidence-scored joining." },
+  { title: "Full-Stack Applications", desc: "React, Next.js, Node.js. Web + mobile, shipped fast." },
+  { title: "Technical Problem-Solving", desc: "Ambiguous problems, complex data, real business outcomes." },
 ];
 
 export function WhatIDo() {
@@ -20,11 +20,11 @@ export function WhatIDo() {
               What I Do
             </span>
             <h2 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl font-bold text-foreground mt-4 mb-6">
-              Full-stack development with AI acceleration<span className="text-accent">.</span>
+              AI systems that solve real problems<span className="text-accent">.</span>
             </h2>
             <p className="text-foreground/40 leading-relaxed">
-              I leverage cutting-edge AI tools to build faster without sacrificing quality. 
-              From real-time systems to mobile apps, I ship production-ready software.
+              I build intelligent systems that drive business outcomes—from custom AI agents 
+              to enterprise data pipelines. Enterprise rigor, startup speed.
             </p>
           </div>
 

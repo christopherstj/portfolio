@@ -1,6 +1,11 @@
 {
-  "summary": "AI-empowered engineer with 6+ years of expertise in TypeScript, React/Next.js, Node.js, Python, and SQL. Proven record of shipping high-quality, customer-facing software that delivers measurable impact.",
+  "summary": "I build AI-powered workflows and intelligent systems that drive real business outcomes. 6+ years shipping TypeScript, React/Next.js, Node.js, and Python for enterprise data platforms and customer-facing applications.",
   "categories": [
+    {
+      "name": "AI & Agents",
+      "icon": "brain",
+      "items": ["Custom AI Agents", "MCP Servers", "Workflow Orchestration", "RAG Pipelines", "Claude API", "Flash LLMs", "Confidence Scoring"]
+    },
     {
       "name": "Frontend",
       "icon": "monitor",
@@ -12,14 +17,9 @@
       "items": ["Node.js", "Fastify", "Python", ".NET", "PostgreSQL", "PostGIS", "Supabase"]
     },
     {
-      "name": "AI & Tooling",
-      "icon": "brain",
-      "items": ["Cursor IDE", "Claude API", "Flash LLMs", "AI-Assisted Development", "High-Velocity Shipping"]
-    },
-    {
-      "name": "Infrastructure",
+      "name": "Data & Infrastructure",
       "icon": "cloud",
-      "items": ["Google Cloud Platform", "Vercel", "Render", "Modal", "Serverless", "ETL Pipelines"]
+      "items": ["ETL Pipelines", "Data Ingestion", "Google Cloud Platform", "Vercel", "Render", "Modal", "Serverless"]
     },
     {
       "name": "Mobile",
@@ -41,7 +41,7 @@
     { "name": "Git", "category": "Version Control" }
   ],
   "approach": {
-    "title": "AI-Empowered Development",
-    "description": "I embrace AI-powered development with Cursor to ideate, build, test, and deploy at very high velocity. This means shipping full-stack applications in weeks instead of months, while maintaining quality and translating user feedback into rapid iterations."
+    "title": "Enterprise Rigor, Startup Speed",
+    "description": "I bring the same AI systems that power multi-million dollar business decisions to every project. Using Cursor and Claude, I ship full-stack applications in weeks—not months—while maintaining the quality and reliability that enterprise clients demand."
   }
 }

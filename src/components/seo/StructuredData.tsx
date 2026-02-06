@@ -3,9 +3,9 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Chris St Jean",
-    jobTitle: "Freelance Full-Stack Developer",
+    jobTitle: "Enterprise AI Engineer",
     description:
-      "AI-powered full-stack developer specializing in outdoor and fitness technology",
+      "I build AI agents and workflows that power multi-million dollar business decisions. Custom MCP servers, intelligent data pipelines, and enterprise-grade AI systems.",
     url: "https://csj.dev",
     sameAs: [
       "https://github.com/christopherstj",
@@ -13,16 +13,19 @@ export function StructuredData() {
       "https://www.strava.com/athletes/22686051",
     ],
     knowsAbout: [
+      "AI Agents",
+      "MCP Servers",
+      "Claude API",
+      "LLM Integration",
+      "RAG Pipelines",
+      "Workflow Orchestration",
+      "Data Pipelines",
+      "ETL Systems",
       "React",
       "Next.js",
-      "React Native",
       "TypeScript",
       "Python",
-      "AI Development",
-      "Strava API",
-      "GPS Tracking",
-      "Geospatial Applications",
-      "Fitness App Development",
+      "Node.js",
     ],
     address: {
       "@type": "PostalAddress",
@@ -35,18 +38,19 @@ export function StructuredData() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Chris St Jean - Freelance Development",
+    name: "Chris St Jean - AI Engineering & Development",
     description:
-      "Freelance full-stack development specializing in AI-powered apps, fitness technology, and outdoor tech",
+      "Enterprise AI engineering specializing in custom AI agents, MCP servers, intelligent workflows, and data pipelines that drive business decisions",
     url: "https://csj.dev",
     serviceType: [
+      "AI Agent Development",
+      "MCP Server Development",
+      "AI Workflow Automation",
+      "Data Pipeline Engineering",
+      "LLM Integration",
+      "RAG System Development",
       "Full-Stack Development",
-      "Mobile App Development",
-      "AI Integration",
-      "Fitness App Development",
-      "Outdoor Tech Development",
-      "Strava API Integration",
-      "GPS Tracking Systems",
+      "Technical Consulting",
     ],
     areaServed: "Worldwide",
     provider: {
@@ -58,10 +62,10 @@ export function StructuredData() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Chris St Jean | AI-Powered Full-Stack Developer",
+    name: "Chris St Jean | AI Agents, MCP Servers & Enterprise Workflows",
     url: "https://csj.dev",
     description:
-      "Portfolio of Chris St Jean - freelance full-stack developer specializing in AI-powered development, fitness apps, and outdoor tech.",
+      "Portfolio of Chris St Jean - Enterprise AI engineer building custom AI agents, MCP servers, and intelligent workflows that power multi-million dollar business decisions.",
   };
 
   return (
