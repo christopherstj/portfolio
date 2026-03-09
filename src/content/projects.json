@@ -27,14 +27,17 @@
       "name": "PathQuest",
       "url": "https://pathquest.app",
       "github": null,
-      "tagline": "Track your summits. Discover new peaks. Conquer challenges.",
-      "description": "A full-stack web and mobile platform for mountain peak baggers, built in ~6 weeks using AI-powered development. Integrates with Strava, features interactive Mapbox visualizations, and transforms athlete activity data into insights.",
+      "tagline": "AI for the outdoors — the first of its kind.",
+      "description": "The first AI-powered platform for the outdoors. A unified data layer spanning 12+ sources with automated ingesters, an agentic o4-mini system with a dozen specialized tools for intelligent outdoor info gathering, Claude Haiku integrations for real-time conditions reports and gear recommendations, and OAuth with Strava, Google, and Garmin. Nothing else like it exists.",
       "image": "/images/projects/pathquest-hero.png",
-      "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "Google Cloud"],
+      "stack": ["Next.js", "React Native", "TypeScript", "Node.js", "Fastify", "PostgreSQL", "PostGIS", "Mapbox", "OpenAI API", "Claude API", "Google Cloud"],
       "features": [
-        "Full-stack web + mobile in 6 weeks",
-        "Geospatial ML pipelines (Strava + OSM + LiDAR)",
-        "Scalable Google Cloud architecture"
+        "First-of-its-kind AI platform for the outdoors",
+        "Agentic o4-mini system with 12+ specialized tools",
+        "Claude Haiku for conditions reports & gear recommendations",
+        "Unified data layer: 12+ sources, fleet of automated ingesters",
+        "Broad-scale OSM location enrichment",
+        "OAuth with Strava, Google, and Garmin"
       ],
       "status": "In Development",
       "role": "Founding Developer",

@@ -4,7 +4,7 @@
     {
       "name": "AI & Agents",
       "icon": "brain",
-      "items": ["Custom AI Agents", "MCP Servers", "Workflow Orchestration", "RAG Pipelines", "Claude API", "Flash LLMs", "Confidence Scoring"]
+      "items": ["Agentic AI Systems", "OpenAI Agents", "MCP Servers", "Workflow Orchestration", "RAG Pipelines", "Claude API", "OpenAI API", "Flash LLMs", "Confidence Scoring", "Tool Orchestration"]
     },
     {
       "name": "Frontend",

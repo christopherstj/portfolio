@@ -44,14 +44,14 @@
       "id": "pathquest",
       "title": "PathQuest — Founding Developer",
       "period": "Oct 2024-Present",
-      "description": "Built a full-stack web and mobile app in 6 weeks—backend APIs, React/Next.js frontend, React Native mobile, with Mapbox visualizations. Geospatial pipelines transforming Strava + OSM data into insights.",
+      "description": "Built the first AI-powered platform for the outdoors — nothing else like it exists. Agentic o4-mini system with a dozen tools, Claude Haiku for conditions and gear, a unified data layer across 12+ sources with automated ingesters, broad-scale OSM enrichment, and OAuth with Strava/Google/Garmin.",
       "location": {
         "name": "Flagstaff, AZ",
         "coordinates": { "lat": 35.198, "lng": -111.651 }
       },
       "image": "/images/journey/pathquest.jpg",
       "type": "project",
-      "highlights": ["Full Stack in 6 Weeks", "React Native", "Geospatial Pipelines"]
+      "highlights": ["First-of-Its-Kind", "Agentic AI", "12+ Data Sources", "LLM Integrations"]
     },
     {
       "id": "santa-barbara",

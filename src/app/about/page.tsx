@@ -65,44 +65,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* AI Approach */}
-      <section className="relative py-16 px-6 border-t border-border">
-        <div className="max-w-7xl mx-auto">
-          <FadeInOnScroll>
-            <div className="edge-card p-8 sm:p-12">
-              <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div>
-                  <span className="text-xs font-mono text-accent uppercase tracking-widest">
-                    My Approach
-                  </span>
-                  <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-foreground mt-4 mb-6">
-                    {skills.approach.title}<span className="text-accent">.</span>
-                  </h2>
-                  <p className="text-foreground/50 leading-relaxed">
-                    {skills.approach.description}
-                  </p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  {skills.tools.slice(0, 4).map((tool, i) => (
-                    <FadeInOnScroll key={tool.name} delay={i * 0.1} scale={0.9}>
-                      <div className="edge-card p-4 text-center">
-                        <div className="font-[family-name:var(--font-display)] font-bold text-foreground">
-                          {tool.name}
-                        </div>
-                        <div className="text-xs font-mono text-foreground/30">
-                          {tool.category}
-                        </div>
-                      </div>
-                    </FadeInOnScroll>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </FadeInOnScroll>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-32 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
